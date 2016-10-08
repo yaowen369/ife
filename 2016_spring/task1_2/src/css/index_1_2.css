@@ -1,0 +1,27 @@
+body{
+	background-color: #dedede;
+}
+
+header{
+	background-color: #333333;
+}
+
+
+
+header img{
+	margin: auto 50px;
+	padding: 10px;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+header ul{
+	float: right;
+}
+
+header li{
+	float: left;
+	width: 100px;
+}
+
+
