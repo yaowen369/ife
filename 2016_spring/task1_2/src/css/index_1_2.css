@@ -42,6 +42,7 @@ ul {
 
 body{
 	background-color: #dedede;
+	line-height: 2em;
 }
 
 header{
@@ -105,5 +106,129 @@ article h2{
 	font-size: 14px;
 	color: #747474;
 }
+
+.p_indent_two{
+	text-indent: 2em;
+}
+
+
+a:link{
+	color: blue;
+}
+
+article ul{
+	/* ul li 也继承了这个属性，导致li中，圆点与文字的间距很宽大*/
+	margin-left: 10px;
+}
+
+article ul{
+	list-style: none;
+}
+
+.text_img_box{
+	width: 82px;
+	text-align: center;
+	border: solid 1px #d1d1d1;
+	margin-left: 50px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-top: 15px;
+}
+
+.normal_content_block ol{
+	margin-left: 80px;
+}
+
+table{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+th{
+	border: solid thin gray;
+	padding: auto;
+	background-color: black;
+	color: white;
+}
+
+td{
+	border: solid thin gray;
+	text-align: center;
+	color: black;
+}
+
+tr:nth-child(even){
+	background-color: #ccc;
+}
+
+
+tr:nth-child(odd){
+	background-color: white ;
+}
+
+div form{
+	margin-left: 200px;
+}
+
+.input_summary{
+	font-size: 12px;
+	color: darkgray;
+}
+
+.form_left{
+	width: 200px;
+	display: inline-block;
+	text-align: right;
+}
+
+.form_right{
+	/*width: 60%;
+	text-align: left;*/
+}
+
+footer{
+	width: 100%;
+	text-align: center;
+	background-color: black;
+	padding-bottom: 30px;
+	padding-top: 15px;
+}
+
+footer p{
+	font-size: 14px;
+	color: white;
+}
+
+
+.textarea_text{
+	/*float: left;*/
+	vertical-align: top;
+	
+	
+}
+
+form label  textarea{
+	width: 80%;
+	margin-top: 10px;
+}
+
+input[type="button"]{
+	width: 100%;
+	padding: 10px;
+	font-size: 18px;
+	background-color: blue;
+	text-align: center;
+	color: white;
+	border-radius: 10px;
+}
+
+.slidebar{
+	
+	height: 40px;
+	/*background-color: #ccc;*/
+	margin-right: 10px;
+	border-left: solid  #ccc;
+}
+
 
 
