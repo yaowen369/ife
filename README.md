@@ -8,3 +8,4 @@
 主要目标:**了解、认识、学习、掌握HTML及CSS** .
  - 任务一：面向零基础的HTML代码编写.（[task1_1](https://github.com/yaowen369/ife/tree/master/2016_spring/task1_1 "yaowen369/ife/tree/master/2016_spring/task1_1")）
  - 任务二：零基础HTML及CSS编码(一).（[task1_2](https://github.com/yaowen369/ife/tree/master/2016_spring/task1_2 "yaowen369/ife/tree/master/2016_spring/task1_2")）
+ - 任务三：三栏式布局.（[task1_3](https://github.com/yaowen369/ife/tree/master/2016_spring/task1_3 "yaowen369/ife/tree/master/2016_spring/task1_3")）
