@@ -1,6 +1,6 @@
 #ife
 ##这是本人自己的前端学习计划，计划将百度前端技术学院（ife）的2016-spring中的task完成。
-具体任务列表以及描述[点击查看](http://ife.baidu.com/task/all "http://ife.baidu.com/task/all") ,同时部分内容也参考学习了  [yenshih参加ife所提交的内容](https://github.com/yenshih/ife "https://github.com/yenshih/ife") 
+具体任务列表以及描述[点击查看](http://ife.baidu.com/task/all "http://ife.baidu.com/task/all")
 
 每完成一个任务，也会在这里进行更新.
 
