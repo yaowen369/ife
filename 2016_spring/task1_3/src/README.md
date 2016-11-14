@@ -1,4 +1,4 @@
-[**task1-3 Demo**](http://yenshih.com/ife/2016_spring/task1-3/dist/index.html)
+[**点击查看官方任务描述**](http://ife.baidu.com/task/detail?taskId=3)
 
 # 任务三：三栏式布局
 
