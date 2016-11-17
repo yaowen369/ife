@@ -3,19 +3,10 @@ html, body, div{
 	margin: 0px;
 }
 
-html{
-	height: 600px;
-	
-}
-
-body{
-	height: 400px;
-	margin-top: 100px;
-}
 
 html, body{
-	/*width: 100%;
-	height: 100%;*/
+	width: 100%;
+	height: 100%;
 }
 
 
@@ -27,4 +18,24 @@ html, body{
 	margin: 0 auto;
 	top: 50%;
 	margin-top: -100px;
+}
+.top_left_quarter_circle{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 50px;
+	height: 50px;
+	border-radius: 0 0 50px 0;
+	background: #fc0;
+}
+
+
+.bottom_right_quarter_circle{
+	position: absolute;
+	top: 150px;
+	left: 350px;
+	width: 50px;
+	height: 50px;
+	border-radius:50px 0 0 0;
+	background: #fc0;
 }
