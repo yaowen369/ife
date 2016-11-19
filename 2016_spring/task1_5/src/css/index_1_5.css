@@ -1,4 +1,14 @@
 
+.clearContent { 
+/**  触发 hasLayout，关于IE的一个特性，但是这个其实我好不了解 **/
+    zoom:1; 
+}
+.clearContent:after { 
+    content:''; 
+display:block; 
+clear:both; 
+visibility: hidden;
+}
 body{
 	background-color: #dedede;
 	line-height: 2em;
@@ -11,7 +21,7 @@ html{
 
 header{
 	position: relative;
-	background-color: #333333;
+	background-color: #262626;
 	width: 100%;
 	height: 74px;
 }
@@ -27,18 +37,18 @@ header{
 	width: 100%;
 	height: 100%;
 	float: right;
-	text-align: center;
 }
 
 #head_ul_div ul{
 	margin-top: 20px;
-	list-style: none;
 }
 
 #head_ul_div li{
-	display: inline;
+	/*display: inline;*/
 	float: right;
-	width: 120px;
+	width: 100px;
+	/*width: 200px;*/
+	list-style-type: disc;
 }
 
 #head_ul_div ul li a:link{
@@ -53,10 +63,12 @@ header{
 #right_content{
 	width: 430px;
 	float:right;
+	overflow: hidden;
 }
 
 #left_content{
-	margin-right: 472px;
+	margin-right: 492px;
+	min-width: 200px;
 }
 
 .normal_content_block{
@@ -65,10 +77,125 @@ header{
 	border-color: red;
 	margin: 10px;
 	border-style: solid;
-	padding: 10px;
+	padding: 20px;
+}
+
+.slidebar{
+	width: 1px;
+	height: 1.5em;
+	background-color: darkgray;
+}
+
+.slidebar_text{
+	margin-left: 10px;
+	font-weight: bold;
+	color: black;
+}
+
+.form_left{
+	width: 150px;
+	text-align: right;
+	display: inline-block;
+}
+
+.input_summary{
+	color: gray;
+	font-size: small;
+	margin-left: 5px;
+}
+
+.textarea_text{
+	vertical-align: top;
+	height: 20px;
+	font-size: 12px;
+}
+
+.author_time_text{
+	font-size: 14px;
+	color: #747474;
+}
+
+article h2{
+	font-size: 18px;
+	color: #6b6c70;
 }
 
 
+input[type="button"]{
+	width: 100%;
+	padding: 10px;
+	font-size: 18px;
+	background-color: blue;
+	text-align: center;
+	color: white;
+	border-radius: 10px;
+}
+
+article ul{
+	margin-left: 10px;
+}
+
+article ul{
+	list-style: none;
+}
+
+.normal_content_block ol{
+	margin-left: 80px;
+}
+
+table{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+th{
+	border: solid thin gray;
+	padding: auto;
+	background-color: black;
+	color: white;
+}
+
+td{
+	border: solid thin gray;
+	text-align: center;
+	color: black;
+}
+
+tr:nth-child(even){
+	background-color: #ccc;
+}
 
 
+tr:nth-child(odd){
+	background-color: white ;
+}
 
+footer{
+	width: 100%;
+	text-align: center;
+	background-color: black;
+	padding-bottom: 30px;
+	padding-top: 15px;
+	clear: both; 
+}
+
+footer p{
+	font-size: 14px;
+	color: white;
+}
+
+.text_img_box{
+	display: inline-block;
+	border: solid grey 1px;
+	margin: 10px;
+	padding: 10px;
+}
+
+.text_img_box p{
+	display: block;
+	text-align: center;
+}
+
+.text_img_box img{
+	display: block;
+}
