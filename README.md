@@ -11,3 +11,4 @@
  - 任务三：三栏式布局.（[task1_3](https://github.com/yaowen369/ife/tree/master/2016_spring/task1_3 "yaowen369/ife/tree/master/2016_spring/task1_3")）
  - 任务四：定位和居中问题.（[task1_4](https://github.com/yaowen369/ife/tree/master/2016_spring/task1_4 "yaowen369/ife/tree/master/2016_spring/task1_4")）
  - 任务五：零基础HTML及CSS编码（二）.（[task1_5](https://github.com/yaowen369/ife/tree/master/2016_spring/task1_5 "yaowen369/ife/tree/master/2016_spring/task1_5")）
+ - 任务六：通过HTML及CSS模拟报纸排版 .（[task1_6](https://github.com/yaowen369/ife/tree/master/2016_spring/task1_6 "yaowen369/ife/tree/master/2016_spring/task1_6")）
