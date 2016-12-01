@@ -97,7 +97,7 @@ body{
 }
 
 .up_red_right_text_div{
-	text-decoration: underline;
+	/*text-decoration: underline;*/
 }
 
 .up_red_right_text_div p{
@@ -105,9 +105,142 @@ body{
 	color: #000000;
 	font-family: "微软雅黑";
 	/*text-decoration: underline;*/
-	line-height: 40px;
+	line-height: 24px;
+	border-bottom: 1px #000000 solid;
+	padding: 0px;
+	display: inline-block;
+	margin-bottom: 10px;
 }
 
 .up_red_right_text_div p:first-letter{
 	font-size: 30px;
+}
+
+.top_right_12{
+	font-size: 12px;
+	color: #676767;
+	font-family: "楷体";
+	line-height: 15px;
+}
+
+.top_right_116{
+	font-size: 116px;
+	color: #75b86b;
+	font-family: "微软雅黑";
+	font-style: italic;
+}
+
+.up_right_bottom_common{
+	font-family: "微软雅黑";
+	color: #cc8091;
+}
+
+.u_r_b_55{
+	float: left;
+	font-size: 55px;
+}
+
+.up_right_bottom_div{
+	margin-top: 30px;
+}
+
+#u_r_b_right{
+	padding-left: 5px;
+	padding-top: 15px;
+	float: left;
+}
+
+.u_r_b_21{
+	font-size: 21px;
+}
+
+.u_r_b_12{
+	
+	font-size: 12px;
+}
+
+ .clearContent { 
+    /**  触发 hasLayout，关于IE的一个特性，但是这个其实我好不了解 **/
+    zoom:1; 
+ }
+.clearContent:after { 
+    content:''; 
+    display:block; 
+    clear:both; 
+    visibility: hidden;
+}
+    
+#middle_text_div{
+	display: table;
+	width: 641px;
+	margin-left: 49px;
+	margin-top: 20px;
+	margin-top: 60px;
+	border: 1px groove blue;
+}
+
+#middle_text_row{
+	display: table-row;
+}
+
+.mid_first_div,.mid_second_div,.mid_third_div{
+	display: table-cell;
+	padding-right: 20px;
+	width: 33%;
+}
+.mid_text_title{
+	font-size: 16px;
+	font-family: "微软雅黑";
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.mid_text_summary{
+	font-size: 12px;
+	line-height: 16px;
+	margin-top: 10px;
+}
+
+.mid_first_title{
+	color: #418c59;
+}
+
+.mid_first_summary{
+	color: #767777;
+	font-family:  simsun;
+}
+
+.mid_second_title{
+	color: #d2994f;
+}
+
+.mid_second_summary{
+	color: #281815;
+	font-family: "微软雅黑";
+	opacity: 0.7;
+}
+
+.mid_third_title{
+	color: #cc7680;
+}
+
+.mid_third_summary{
+	font-style: italic;
+	opacity: 0.7;
+}
+
+.mid_text_bottom{
+	font-size: 12px;
+	font-family: "微软雅黑";
+	line-height: 16px;
+}
+
+.mid_text_bottom_percent{
+	color: #CD4A48;
+	font-style: italic;
+	opacity: 0.7;
+}
+
+.mid_text_bottom_div{
+	margin-top: 20px;
 }
