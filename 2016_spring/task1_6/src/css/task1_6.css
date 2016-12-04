@@ -33,7 +33,7 @@ body{
 .top_text_left{
 	position: relative;
 	font-size: 12px;
-	font-family: simhei;
+	font-family: simsun;
 	color: white;
 	z-index: 1;
 }
@@ -243,4 +243,275 @@ body{
 
 .mid_text_bottom_div{
 	margin-top: 20px;
+}
+
+#bottom_div{
+	position: relative;
+	top: 30px;
+	left: 49px;
+	width: 892px;
+	border: 1px blueviolet groove;
+}
+
+#bottom_left_div{
+	width: 415px;
+	border: 1px double aquamarine;
+}
+#bottom_right_div{
+	position: absolute;
+	width: 458px;
+	top: 0;
+	right: 0;
+	border: 1px dotted cyan;
+}
+
+.bt_left_text_72{
+	font-size: 72px;
+	color: #f5e427;
+	font-style: italic;
+}
+
+.bt_left_text_42{
+	font-size: 42px;
+	color: #11456B;
+	font-family: simsun;
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+
+.bt_left_text_36{
+	font-size: 33px;
+	color: #11456B;
+	font-family: simsun;
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+
+.bt_ri_line{
+	height: 2px;
+	background-color: #11456B;
+}
+
+#bottom_left_bottom_div{
+	padding-top: 20px;
+	border: 1px darkblue groove;
+}
+
+#bottom_left_bottom_div p{
+	font-size: 12px;
+	color: #767777;
+	font-family: "宋体";
+	line-height: 16px;
+}
+
+#bot_left_first_div{
+	margin-top: 20px;
+}
+
+.bt_left_first_text{
+	float: left;
+	font-size: 70px;
+	color: #F5E327;
+	font-family: "微软雅黑";
+}
+
+/*#bottom_left_bottom_div:first-letter{
+	font-size: 70px;
+	color: #F5E327;
+	font-family: "微软雅黑";
+}*/
+
+.left_bot_pic2{
+	float: right;
+	margin-left: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#right_img_layer{
+	position: absolute;
+	width: 458px;
+	height: 61px;
+	/*这是为什么是3 不理解*/
+	bottom: 3px;
+	background: black;
+	opacity: 0.3;
+	z-index: 1;
+	display: table;
+}
+
+#bot_right_up_div{
+	position: relative;
+}
+
+#right_img_line{
+	position: absolute;
+	top: 8px;
+	left: 30px;
+	width: 3px;
+	height: 44px;
+	background-color: #72B16A;
+}
+
+#right_img_layer p{
+	padding-left: 60px;
+	display: table-cell;
+}
+
+#right_img_text_26{
+	font-size: 26px;
+	color: #FFFFFF;
+	font-family: "微软雅黑";
+	vertical-align: middle;
+}
+
+#right_img_text_12{
+	font-size: 12px;
+	color: #72b16a;
+	padding-left: 10px;
+	font-family: "微软雅黑";
+	font-style: italic;
+	letter-spacing: 0.4em;
+}
+
+#bot_right_down_div{
+	margin-top: 32px;
+	background-color: #EEEED6;
+	width: 459px;
+	height: 318px;
+}
+
+#bot_right_down_div ul{
+	position: relative;
+	list-style-type: none;
+	margin-left: 30px;
+	padding-top: 30px;
+}
+
+.bot_rig_li_triangle{
+	display: inline-block;
+	width: 0px;
+	height: 0px;
+	border-width: 4px;
+	border-style: solid;
+	margin-right: 5px;
+	border-color: transparent transparent black transparent;   
+}
+
+.bot_rig_li_16{
+	font-size: 16px;
+	color: #5a5b5b;
+	font-family: simsun;
+	line-height: 36px;
+}
+
+.bot_rig_li_12{
+	font-size: 12px;
+	color: #5A5B5B;
+	font-family: simsun;
+	font-style: italic;
+	line-height: 36px;
+}
+
+#bot_rig_red_div{
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	width: 260px;
+	height: 160px;
+	background-color: red;
+	display: table;
+}
+
+#bot_rig_red_0{
+	width: 28%;
+	display: table-cell;
+	font-size: 110px;
+	color: #FFFFFF;
+	font-family: "微软雅黑";
+	vertical-align: middle;
+	text-align: end;
+}
+
+#bot_rig_verital_line_div{
+	width: 4%;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#bot_rig_verital_line{
+	background: #FFFFFF;
+	width: 2px;
+	height: 86px;
+	margin-left: 4px;
+}
+
+#bot_rig_red_rig_div{
+	width: 68%;
+	display: table-cell;
+	text-align: start;
+	vertical-align: middle;
+}
+
+.bot_ri_red_21{
+	font-size: 21px;
+	color: #FFFFFF;
+	font-family: simhei;
+	font-style: italic;
+	line-height: 24px;
+}
+
+.bot_ri_red_12{
+	font-size: 12px;
+	color: #FFFFFF;
+	font-family: simhei;
+	padding-bottom: 6px;
+}
+
+#most_rig_bot_div{
+	border: 1px green dashed;
+	width: 190px;
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	height: 160px;
+}
+
+#most_rig_bot_div p{
+	padding-top: 10px;
+	font-size: 14px;
+	color: #5A5B5B;
+	font-family: simhei;
+	font-style: italic;
+	line-height: 16px;
+}
+
+.bot_rig_quote{
+	font-size: 72px;
+	color: #D45D5C;
+	font-family: simhei;
+}
+#quote_1{
+	top: 25px;
+	position: absolute;
+	
+}
+
+#quote_2{
+	top: 95px;
+	position: absolute;
+}
+
+footer{
+	position: absolute;
+	bottom: -700px;
+	height: 50px;
+	right: 49px;
+	width: 892px;
+	border: 1px black solid;
+}
+
+#footer_line{
+	height: 5px;
+	background-color: #938e8c;
 }
