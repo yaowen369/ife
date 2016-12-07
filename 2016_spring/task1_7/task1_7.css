@@ -1,0 +1,87 @@
+body{
+	width: 1280px;
+	margin: 0px auto;
+	background-color: white;
+}
+
+nav{
+	position: fixed;
+	top: 0;
+	left: 0px;
+	height: 60px;
+	border: 1px aqua solid;
+	width: 100%;
+	z-index: 2;
+	background-color: white;
+}
+
+#logo_new_word{
+	position: absolute;
+	top: 15px;
+	left: 80px;
+	background-image: url(img/logo.png);
+	background-repeat: no-repeat;
+	background-position: left ;
+	background-size: 30px 30px;
+	font-size: 20px;
+	padding-left: 30px;
+	height: 30px;
+	text-align: center;
+	width: 10%;
+	font-weight: bolder;
+}
+
+#login{
+	position: absolute;
+	right: 100px;
+	top: 21px;
+	background-image: url(img/person.png);
+	background-repeat: no-repeat;
+	background-position: left;
+	font-size: 10px;
+	text-align: center;
+	padding-left: 20px;
+	color: orangered;
+}
+
+#nav_ul_box{
+	height: 60px;
+	margin-right: 200px;
+	float: right;
+	border: 1px aqua dotted;
+}
+
+#li_underline{
+	position: absolute;
+	bottom: 0px;
+	height: 3px;
+	width: 60px;
+	background-color: red;
+}
+
+nav ul{
+	list-style: none;
+	margin-top: 18px;
+}
+
+nav ul li{
+	display: inline-block;
+	width: 80px;
+	font-size: 10px;
+}
+
+nav ul li a{
+	text-decoration: none;
+	color: #676767;
+}
+
+header{
+	position: relative;
+	margin-top: 60px;
+}
+
+#banner_mask{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(ff, ff, ff, 1);
+}
