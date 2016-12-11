@@ -2,7 +2,6 @@ body{
 	width: 1280px;
 	margin: 0px auto;
 	background-color: white;
-	border: red dashed 1px;
 }
 
 nav{
@@ -158,4 +157,124 @@ input[type=button]{
 	border-left: none;
 }
 
+#search_city{
+	border: chartreuse 1px double;
+}
 
+#search_top{
+	height: 350px;
+	background-color: #EDEDED;
+}
+
+#search_top img{
+	display: block;
+/*	margin: 129px auto;*/
+	padding-top: 100px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#search_top p{
+	font-size: 60px;
+	width: 100%;
+	text-align: center;
+	color: #9F9F9F;
+	margin-top: 50px;
+}
+
+#search_bottom{
+	position: relative;
+}
+
+#search_bottom img{
+	position: absolute;
+	z-index: -1;
+}
+
+#search_bottom .search_title{
+	padding-top: 50px;
+	color: #FFF7EE;
+	font-size: 25px;
+	text-align: center;
+}
+
+#search_bottom  .search_line{
+	width: 30px;
+	background-color: #FFFCFF;
+	height: 3px;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#search_bottom .search_summary{
+	margin-top: 20px;
+	color: #FAEDE7;
+	font-size: 12px;
+	text-align: center;
+}
+
+#search_city form{
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	border: darkcyan 1px groove;
+}
+
+#search_city form select{
+	width: 200px;
+	height: 30px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#search_city input[type=button]{
+	width: 200px;
+	height: 30px;
+	color: white;
+	font-size: 15px;
+}
+
+#activity_div{
+	width: 100%;
+	margin-top: 200px;
+	border: fuchsia 1px solid;
+	background-color: #F8F8F8;
+	display: table;
+}
+
+.activity_wrap{
+	border: olive 1px dotted;
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.activity_wrap img{
+	margin-top: 10px;
+	text-align: center;
+}
+
+
+#activity_div .activity_wrap .activity_title{
+	color: black;
+	margin-top: 20px;
+	font-size: 15px;
+	text-align: center;
+}
+
+#activity_div .activity_wrap .activity_summary{
+	color: #999999;
+	font-size: 8px;
+	text-align: center;
+	margin-top: 10px;
+}
+
+#activity_div .activity_wrap .act_title_2{
+	margin:0;
+	padding: 0px;
+}
+
+#activity_div .activity_wrap .act_summary_2{
+	
+}
