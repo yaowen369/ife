@@ -11,7 +11,7 @@ nav{
 	height: 60px;
 	border: 1px aqua solid;
 	width: 100%;
-	z-index: 2;
+	z-index: 10;
 	background-color: white;
 }
 
@@ -281,12 +281,12 @@ input[type=button]{
 
 #gallery{
 	margin-top: 100px;
-	height: 768px;
+	/*height: 479px;*/
 	background-color: white;
 }
 
 #pic_container{
-	width: 66.6%;
+	width: 66.4%;
 	float: left;
 	display: inline-block;
 }
@@ -324,13 +324,13 @@ input[type=button]{
 
 #text_container{
 	float: right;
-	width: 33.4%;
+	width: 33.6%;
 	height: 100%;
-	padding-top: 150px;
 }
 
 #text_container h2{
 	text-align: center;
+	padding-top: 150px;
 }
 
 #text_container h2 span{
@@ -379,4 +379,75 @@ input[type=button]{
 
 .switch a:first-child{
 	background-color: #929292;
+}
+
+#life{
+	width: 100%;
+}
+
+#life_1{
+	background: #E8504F;
+}
+
+#life_2{
+	background: white;
+}
+
+.life_box{
+	height: 520px;
+	float: left;
+	width: 33.2%;
+	margin-top: -3px;
+}
+
+
+.life_text_common{
+	font-size: 20px;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.life_line{
+	width : 40px;
+	height: 2px;
+	margin: 10px  auto;
+}
+
+#life_img_box{
+	width: 33.6%;
+	height: 520px;
+	float: right;
+}
+
+
+
+.text_1{
+	color: white;
+}
+
+.text_2{
+	color: #333333;
+}
+
+.line_1{
+	background-color: white;
+}
+
+.line_2{
+	background-color: #666666;
+}
+
+.life_box p a{
+	text-decoration: none;
+	text-align: center;
+	border: 1px solid black;
+	padding: 5px  20px;
+}
+
+.life_box p:first-child{
+	margin-top: 150px;
+}
+
+.life_box p:last-child{
+	margin-top: 20px;
 }
