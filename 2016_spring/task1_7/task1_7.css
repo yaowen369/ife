@@ -382,6 +382,7 @@ input[type=button]{
 }
 
 #life{
+	position: relative;
 	width: 100%;
 }
 
@@ -450,4 +451,53 @@ input[type=button]{
 
 .life_box p:last-child{
 	margin-top: 20px;
+}
+
+#life_arrow{
+	position: absolute;
+	left: 66.4%;
+	top: 240px;
+	width: 0;
+	height: 0;
+	border-width: 20px;
+	border-style: solid;
+	border-color: transparent transparent transparent white;   
+}
+
+#join{
+	width: 100%;
+	border: 1px double dodgerblue;
+}
+
+#join p:first-of-type{
+	font-size: 30px;
+	color: #333333;
+	text-align: center;
+	margin-top: 100px;
+}
+
+#join P:nth-last-of-type(2), #join p:nth-last-of-type(1){
+	font-size: 10px;
+	color: #999999;
+	text-align: center;
+	line-height: 20px;
+}
+
+
+#join_line{
+	margin-top: 10px;
+	margin-bottom: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 30px;
+	height: 3px;
+	background: #E8504F;
+}
+
+#join div:last-child{
+	width: 80%;
+	margin-top: 100px;
+	border: 1px lightblue solid;
+	margin-left: auto;
+	margin-right: auto;
 }
