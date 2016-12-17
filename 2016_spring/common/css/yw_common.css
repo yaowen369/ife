@@ -1,0 +1,10 @@
+.clearContent { 
+    /**  触发 hasLayout，关于IE的一个特性，但是这个其实我好不了解 **/
+        zoom:1; 
+    }
+.clearContent:after { 
+    content:''; 
+    display:block; 
+    clear:both; 
+    visibility: hidden;
+    }
