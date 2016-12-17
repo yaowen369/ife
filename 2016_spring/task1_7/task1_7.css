@@ -9,7 +9,6 @@ nav{
 	top: 0;
 	left: 0px;
 	height: 60px;
-	border: 1px aqua solid;
 	width: 100%;
 	z-index: 10;
 	background-color: white;
@@ -48,7 +47,6 @@ nav{
 	height: 60px;
 	margin-right: 200px;
 	float: right;
-	border: 1px aqua dotted;
 }
 
 #li_underline{
@@ -96,7 +94,6 @@ header{
 	top: 450px;
 	left: 100px;
 	max-width: 700px;
-	border: blueviolet dashed 1px;
 }
 
 #time_new_life{
@@ -114,7 +111,7 @@ header{
 	line-height: 25px;
 }
 
-input[type=button]{
+#banner  input[type=button]{
 	color: white;
 	text-align: center;
 	font-size: 30px;
@@ -157,9 +154,6 @@ input[type=button]{
 	border-left: none;
 }
 
-#search_city{
-	border: chartreuse 1px double;
-}
 
 #search_top{
 	height: 350px;
@@ -218,7 +212,6 @@ input[type=button]{
 	width: 960px;
 	margin-left: auto;
 	margin-right: auto;
-	border: darkcyan 1px groove;
 }
 
 #search_city form select{
@@ -233,18 +226,20 @@ input[type=button]{
 	height: 30px;
 	color: white;
 	font-size: 15px;
+	background-color: red;
+	border-width: 0px;
 }
 
 #activity_div{
 	width: 100%;
-	margin-top: 200px;
-	border: fuchsia 1px solid;
+	margin-top: 100px;
+	padding-top: 100px;
+	padding-bottom: 50px;
 	background-color: #F8F8F8;
 	display: table;
 }
 
 .activity_wrap{
-	border: olive 1px dotted;
 	display: table-cell;
 	text-align: center;
 	vertical-align: middle;
@@ -271,8 +266,10 @@ input[type=button]{
 }
 
 #activity_div .activity_wrap .act_title_2{
-	margin:0;
+	margin:0 auto;
 	padding: 0px;
+	width: 200px;
+	text-align-last: justify;
 }
 
 #activity_div .activity_wrap .act_summary_2{
@@ -350,7 +347,6 @@ input[type=button]{
 #text_container>a{
 	width: 100px;
 	color: #E8504F;
-	border: 1px #E8504F solid;
 	text-align: center;
 	margin: 20px auto;
 	text-decoration: none;
@@ -369,12 +365,12 @@ input[type=button]{
 .switch a{
 	width: 10px;
 	height: 10px;
-	border: 1px solid #929292;
 	border-radius: 6px;
 	margin-left: 10px;
 	margin-right: 10px;
 	text-decoration: none;
 	display: inline-block;
+	border: 1px #929292 solid;
 }
 
 .switch a:first-child{
@@ -441,7 +437,6 @@ input[type=button]{
 .life_box p a{
 	text-decoration: none;
 	text-align: center;
-	border: 1px solid black;
 	padding: 5px  20px;
 }
 
@@ -465,11 +460,12 @@ input[type=button]{
 }
 
 #join{
-	width: 100%;
-	border: 1px double dodgerblue;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
 }
-
-#join p:first-of-type{
+/*#join p:first-of-type{*/
+.join_title{
 	font-size: 30px;
 	color: #333333;
 	text-align: center;
@@ -494,10 +490,211 @@ input[type=button]{
 	background: #E8504F;
 }
 
-#join div:last-child{
+#join_bottom{
 	width: 80%;
 	margin-top: 100px;
-	border: 1px lightblue solid;
 	margin-left: auto;
 	margin-right: auto;
 }
+
+#join_bottom{
+	width: 100%;
+	margin-top: 100px;
+}
+
+#join_bottom div:first-child{
+	width: 38%;
+	float: left;
+}
+
+#join_bottom div:last-of-type{
+	width: 58%;
+	float: right;
+}
+
+#join_term p:nth-of-type(3n+1){
+	font-size: 20px;
+	color: #333333;
+}
+
+#join_term p:nth-of-type(3n+2){
+	font-size: 10px;
+	color: #999999;
+	margin-top: 10px;
+}
+
+#join_term p:nth-of-type(3n){
+	text-align: right;
+}
+
+#join_term p:nth-of-type(3n+4){
+	margin-top: 20px;
+}
+
+#join_term p a{
+	text-decoration: none;
+	font-size: 8px;
+	color: #666666;
+	background-image: url(img/down_arrow.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 20px;
+}
+
+#join_form input[type=text]{
+	width: 250px;
+	height: 30px;
+	margin-bottom: 15px;
+	background-color: #EdEDEF;
+	border-width: 0;
+	padding-left: 10px;
+}
+
+input[type=text]:nth-of-type(2n){
+	float: right;
+}
+
+#join_form textarea{
+	width: 573px;
+	height: 100px;
+	padding: 10px;
+	background-color: #EDEDEF;
+	border-width: 0;
+	margin-top: 15px;
+}
+
+#join_form button{
+	width: 100%;
+	height: 40px;
+	margin-top: 15px;
+	text-align: center;
+	background-color: #EDEDEF;
+	border-width: 0;
+}
+
+footer{
+	height: 400px;
+	width: 100%;
+	background-color: #33363F;
+	/*background-color: #1E90FF;*/
+	margin-top: 100px;
+}
+
+.footer_title{
+	font-size: 30px;
+	padding-top: 100px;
+	text-align: center;
+	color: white;
+}
+
+.footer_summary{
+	font-size: 10px;
+	color: white;
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	line-height: 15px;
+	text-align: center;
+}
+
+
+#footer_form{
+	margin-top: 30px;
+	width: 450px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 0px;
+}
+
+#footer_form input{
+	height: 50px;
+	display: inline-block;
+	border-width: 0px;
+	vertical-align: top;
+}
+
+#footer_form input[type=text]{
+	background-color: white;
+	width: 330px;
+	padding-left: 10px;
+}
+
+#footer_form input[type=button]{
+	background-color: #717179;
+	width: 100px;
+	text-align: center;
+}
+
+footer #share{
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	height: 50px;
+	display: table;
+}
+
+#share #share_row{
+	display: table-row;
+	height: 100%;
+}
+
+#share #share_row .share_cell{
+	background-position: center center;
+	width: 24%;
+	height: 100%;
+	background-repeat: no-repeat;
+	display: table-cell;
+}
+
+#share #share_row .share_qq{
+	background-image: url(img/share_qq.png);
+}
+
+#share #share_row .share_weibo{
+	background-image: url(img/share_weibo.png);
+}
+
+#share #share_row .share_twitter{
+	background-image: url(img/share_twitter.png);
+}
+
+#share #share_row .share_other{
+	background-image: url(img/share_other.png);
+}
+
+#footer_bottom{
+	position: fixed;
+	bottom: 0px;
+	height: 50px;
+	width: 1240px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #30303A;
+	padding-left: 20px;
+	padding-right: 20px;
+
+}
+
+#footer_bottom p{
+	color: white;
+	font-size: 8px;
+	text-align: center;
+	display: inline-block;
+	padding-top: 21px;
+}
+
+#footer_bottom p:first-child{
+	float: left;
+}
+
+#footer_bottom p:last-child{
+	float: right;
+}
+
+#footer_bottom p a{
+	text-decoration: none;
+	color: white;
+}
+
