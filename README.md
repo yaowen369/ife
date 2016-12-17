@@ -13,3 +13,4 @@
  - 任务五：零基础HTML及CSS编码（二）.（[task1_5](https://github.com/yaowen369/ife/tree/master/2016_spring/task1_5 "yaowen369/ife/tree/master/2016_spring/task1_5")）
  - 任务六：通过HTML及CSS模拟报纸排版 .（[task1_6](https://github.com/yaowen369/ife/tree/master/2016_spring/task1_6 "yaowen369/ife/tree/master/2016_spring/task1_6")）
  - 任务七：实现常见的技术产品官网的页面架构及样式布局 .（[task1_7](https://github.com/yaowen369/ife/tree/master/2016_spring/task1_7 "yaowen369/ife/tree/master/2016_spring/task1_7")）
+ - 任务八：响应式网格（栅格化）布局 .（[task1_8](https://github.com/yaowen369/ife/tree/master/2016_spring/task1_8 "yaowen369/ife/tree/master/2016_spring/task1_8")）
