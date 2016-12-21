@@ -21,7 +21,6 @@ header img{
 
 
 #search-login{
-	border: 1px red solid;
 	position: relative;
 	height: 30px;
 	width: 500px;	
@@ -228,7 +227,7 @@ aside ul .menu_6{
 	color: #AAA;
 	line-height: 30px;
 	text-align: center;
-	margin-left: 20px;
+	margin-left: 10px;
 }
 
 #content-top  li:after{
@@ -250,21 +249,22 @@ aside ul .menu_6{
 	margin-right: 50px;
 	margin-top: 20px;
 	width: calc(100% - 100px);
-	border: 1px saddlebrown solid;
 }
 
 #query{
+	position: relative;
 	width: 100%;
 	background-color: white;
 	padding: 10px 10px;
 }
 
 #query form{
-	border: 1px aqua dotted;
+	position: relative;
 	display: inline-block;
 }
 
 #query select{
+	position: relative;
 	padding: 4px 8px;
 	border: 1px #CBCBCB solid;
 	appearance: none;
@@ -277,6 +277,75 @@ aside ul .menu_6{
 #query span{
 	display: inline-block;
 	color: #B6B6B6;
-	font-size: 14px;
+	font-size: 13px;
 	margin-right: 10px;
+}
+
+
+#query  .query-item-div{
+	position: relative;
+	box-sizing: border-box;
+	height: 25px;
+	display: inline-block;
+}
+
+#query-buyer select, #query-date select, #query-seller select, #query-volume select{
+	width: 140px;
+}
+
+#query-item select, #query-consume-date select, #query-people select{
+	width: 70px;
+}
+
+#query-buyer, #query-seller{
+	margin-left: 20px;
+}
+
+
+#query-date{
+	margin-left: 60px;
+}
+
+#query-consume-date{
+	margin-left: 20px;
+}
+
+#query-seller{
+	position: absolute;
+	margin-top: 10px;
+	left: 130px;
+}
+
+#query-people{
+	position: absolute;
+	left: 190px;
+}
+
+#query-volume{
+	position: absolute;
+	left: 212px;
+}
+
+#query-change{
+	position: absolute;
+	display: block;
+	left: 335px;
+	top: 12px;
+}
+
+#query-change-text{
+	position: absolute;
+	left: 347px;
+	font-size: 13px;
+	top: 21px;
+	color: white;
+}
+
+#query form input[type=button]{
+	position: absolute;
+	background-color: #388BC1;
+	right: 100px;
+	top: 20px;
+	padding: 5px 15px;
+	color: white;
 }
