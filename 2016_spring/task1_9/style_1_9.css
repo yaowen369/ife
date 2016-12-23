@@ -249,10 +249,12 @@ aside ul .menu_6{
 	margin-right: 50px;
 	margin-top: 20px;
 	width: calc(100% - 100px);
+	border: 1px red dashed;
 }
 
 #query{
 	position: relative;
+	box-sizing: border-box;
 	width: 100%;
 	background-color: white;
 	padding: 10px 10px;
@@ -348,4 +350,129 @@ aside ul .menu_6{
 	top: 20px;
 	padding: 5px 15px;
 	color: white;
+}
+
+#price-info{
+	box-sizing: border-box;
+	width: 100%;
+	margin-top: 10px;
+	border: 1px aqua dotted;
+}
+
+#price-info div{
+	height: 65px;
+	display: inline-block;
+	float: left;
+}
+
+#price-info .arrow-left, #price-info .arrow-right, #price-info #history-price{
+	background: white;
+}
+
+
+#price-info .arrow-left, #price-info .arrow-right{
+	width: 30px;	
+}
+
+#price-info .arrow-common{
+	box-sizing: border-box;
+	width: 15px;
+	height: 15px;
+	border: 1px solid;
+	background: transparent;
+	border-color: #9B9B9B transparent transparent #9B9B9B; 	
+}
+
+#price-info .arrow-left{
+}
+
+#price-info .arrow-left div{
+	margin-left: 15px;
+	transform: rotate(315deg);
+	margin-top: 22px;
+}
+
+#price-info .arrow-right{
+	margin-left: 5px;
+}
+
+#price-info .arrow-right div{
+	margin-right: 15Ípx;
+	transform: rotate(135deg);
+	margin-top: 22px;
+}
+
+#price-info #history-price{
+	margin-left: 5px;
+}
+
+#price-info #history-price p{
+	display: inline-block;
+	background: url(img/history.png) no-repeat left center;
+	padding-left: 40px;
+	height: 30px;
+	line-height: 30px;
+	margin: 17.5px 15px;
+}
+
+#price-info #price-list{
+	
+}
+
+#price-info #price-list ol{
+	height: 100%;
+	
+}
+
+#price-info #price-list li{
+	box-sizing: border-box;
+	background: white;
+	width: 113px;
+	display: inline-block;
+	float: left;
+	margin-left: 5px;
+	height: 100%;
+}
+
+#price-info #price-list li .price-time, #price-info #price-list li .price-am{
+	color: #333333;
+}
+
+#price-info #price-list li .price-time{
+	font-size: 12px;
+}
+
+#price-info #price-list li .price-am{
+	font-size: 10px;
+}
+
+#price-info #price-list li .rmb-flag{
+	color: #9B9B9B;
+	font-size: 14px;
+}
+
+
+#price-info #price-list li .money{
+	color: #E54E07;
+	font-size: 20px;
+}
+
+#price-info #price-list .fisrt-line{
+	margin-top: 10px;
+	text-align: center;
+}
+
+#price-info #price-list .second-line{
+	margin-top: 6px;
+	text-align: center;
+}
+
+#price-info #history-price{
+	float: right;
+}
+
+#price-info #price-list ol li:first-child{
+	border-top: #3673BD;
+	border-top-width: 3px;
+	border-top-style: solid;
 }
