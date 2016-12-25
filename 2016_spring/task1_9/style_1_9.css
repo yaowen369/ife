@@ -4,7 +4,6 @@ body{
 	margin-left: auto;
 	margin-right: auto;
 	background-color: #EDEDED;
-	border: 1px dotted saddlebrown;
 }
 
 header{
@@ -202,7 +201,6 @@ aside ul .menu_6{
 #main-content{
 	box-sizing: border-box;
 	width: calc(100% - 260px);
-	border: 1px blue solid;
 	margin-left: 260px;
 }
 
@@ -584,4 +582,37 @@ aside ul .menu_6{
 
 #statics .rect-4{
 	background-color: #E2CD46;
+}
+
+
+#first-prj-wrapper{
+	box-sizing: border-box;
+	width: 100%;
+	border: 1px #0000FF solid;
+	margin-top: 20px;
+}
+
+
+/*#first-prj-table{
+	box-sizing: border-box;
+	width: calc(66% - 10px);
+	border: 1px dodgerblue dottedc;
+}*/
+
+#first-prj-table{
+	box-sizing: border-box;
+	width: calc(60% - 10px);
+	float: left;
+	border: 1px #bbb solid;
+	border-radius: 10px;
+}
+
+
+#first-prj-table h3{
+	padding: 10px;
+	font-size: 12px;
+	color: #AAAAAA;
+	background-color: #F4F5F7;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
 }
