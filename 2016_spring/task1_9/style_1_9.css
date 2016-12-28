@@ -616,3 +616,32 @@ aside ul .menu_6{
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 }
+
+
+#first-prj-box ol{
+	width: 100%;
+	margin-left: 20px;
+}
+
+#first-prj-box ol li{
+	list-style: none;
+	float: left;
+	display: list-item;
+	width: calc(20% - 20px);
+}
+
+#first-prj-box input{
+	display: none;
+}
+
+
+#table-menu1{
+	display: block;
+	position: absolute;
+	width: 403px;
+}
+
+#first-prj-box .table-menu  td{
+	font-size: 12px;
+	padding: 5px 10px;
+}
