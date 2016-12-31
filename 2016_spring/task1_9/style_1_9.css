@@ -588,7 +588,7 @@ aside ul .menu_6{
 #first-prj-wrapper{
 	box-sizing: border-box;
 	width: 100%;
-	border: 1px #0000FF solid;
+	border: 1px #0000FF dotted;
 	margin-top: 20px;
 }
 
@@ -603,12 +603,13 @@ aside ul .menu_6{
 	box-sizing: border-box;
 	width: calc(60% - 10px);
 	float: left;
-	border: 1px #bbb solid;
 	border-radius: 10px;
+	height: 360px;
+	background-color: white;
 }
 
 
-#first-prj-table h3{
+#first-prj-table h3, #second-prj-table h3{
 	padding: 10px;
 	font-size: 12px;
 	color: #AAAAAA;
@@ -619,29 +620,145 @@ aside ul .menu_6{
 
 
 #first-prj-box ol{
+	position: relative;
 	width: 100%;
 	margin-left: 20px;
+	margin-top: 10px;
+	z-index: 2;
 }
 
 #first-prj-box ol li{
 	list-style: none;
 	float: left;
 	display: list-item;
-	width: calc(20% - 20px);
+	width: calc(20% - 30px);
+	background-color: #EDEFF1;
+	margin-left: 5px;
+	border: 1px solid #EDEFF1;
+	border-radius: 5px;
+	text-align: center;
+	font-size: 12px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
+
+#first-prj-box ol li:first-child{
+	background-color: white;
+	border:1px solid #CACBCB;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-bottom: none;
+}
+
 
 #first-prj-box input{
 	display: none;
 }
 
+#first-prj-table table{
+	border-collapse: collapse;
+}
+
+
+#first-prj-table table tr td{
+	border: 1px solid #ddd;
+}
 
 #table-menu1{
+	box-sizing: border-box;
 	display: block;
 	position: absolute;
-	width: 403px;
+	z-index: 1;
+	border:1px solid #CACBCB;
+	margin-top: 4px;
+	left: 5px;
+}
+
+#table-menu1 table{
+	margin: 20px 30px;
 }
 
 #first-prj-box .table-menu  td{
 	font-size: 12px;
-	padding: 5px 10px;
+	color: #666;
+	padding: 10px 20px;
+}
+
+#second-prj-table{
+	box-sizing: border-box;
+	width: calc(40% - 10px);
+	float: right;
+	border-radius: 10px;
+	height: 360px;
+	background-color: white;
+}
+
+#second-prj-box{
+	margin-left: 30px;
+	margin-top: 10px;
+}
+
+#second-prj-box .prj-title{
+	font-size: 15px;
+	color: #999;
+}
+
+#second-prj-box  .prj-content{
+	font-size: 15px;
+	color: #333;
+}
+
+#second-prj-mid{
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	height: 55px;
+	border: 1px solid #B6B6B6;
+	border-left: none;
+	border-right: none;
+	margin-right: 30px;
+}
+
+#second-prj-mid .price{
+	position: absolute;
+	display: block;
+	width: 60px;
+	top: 5px;
+	left: 10px;
+	height: 20px;
+}
+
+#second-prj-mid .price-content{
+	position: absolute;
+	display: block;
+	width: 60px;
+	top: 28px;
+	left: 10px;
+	height: 20px;
+}
+
+#second-prj-mid .charge{
+	position: absolute;
+	display: block;
+	width: 60px;
+	top: 5px;
+	left: 80px;
+	height: 20px;
+}
+
+#second-prj-mid .charge-content{
+	position: absolute;
+	display: block;
+	width: 60px;
+	top: 28px;
+	left: 80px;
+	height: 20px;
+}
+
+#second-prj-box .line{
+	position: absolute;
+	width: 1px;
+	height: 55px;
+	background-color: #B6B6B6;
+	left: 70px;
 }
