@@ -318,10 +318,109 @@
 							</div>
 							<p class="prj-title">详细描述</p>
 							<p class="prj-content">该项目目前负责人是...</p>
-							<div id="second-prj-bottom">
-								
-							</div>
+							<form id="second-prj-bottom">
+								<input type="checkbox" name="agree" id="agree" checked/>
+								<label for="agree">遵守保密协议</label>
+								<input type="button" value="搜索"/>
+							</form>
 						</div>
+					</div>
+				</section>
+				
+				<section id="car-calendar-wrapper">
+					<div id="left-calendar">
+						<h3>日历</h3>
+						<ul>
+							<li>
+								<select name="year">
+									<option value="year-2016">2016年</option>
+								</select>
+							</li>
+							<li>
+								<select name="month">
+									<option value="month-4">四月</option>
+								</select>
+							</li>
+							<li>
+								<select name="record-date">
+									<option value="record">标注日期</option>
+								</select>
+							</li>
+							<li>
+								<select name="return today">
+									<option value="return">返回今天</option>
+								</select>
+							</li>
+						</ul>
+						
+						<table >
+							<!--第一行 星期-->
+							<tr>
+								<td class="week">一</td>
+								<td class="week">二</td>
+								<td class="week">三</td>
+								<td class="week">四</td>
+								<td class="week">五</td>
+								<td class="week">六</td>
+								<td class="week">日</td>
+							</tr>
+							<!--第二行 1-3-->
+							<tr>
+								<td class="day"></td>
+								<td class="day"></td>
+								<td class="day"></td>
+								<td class="day"></td>
+								<td class="day workday">
+									<span class="solar">1</span>
+									<span class="lunar festival">愚人节</span>
+								</td>
+								<td class="day weekday">
+									<span class="solar">2</span>
+									<span class="lunar">廿五</span>
+								</td>
+								<td class="day weekday">
+									<span class="solar">3</span>
+									<span class="lunar">廿六</span>
+								</td>
+							</tr>
+							
+							<!--第三行 4-10-->
+							<tr>
+								<td class="day">
+									<span class="solar">4</span>
+									<span class="lunar">廿七</span>
+								</td>
+								<td class="day">
+									<span class="solar">5</span>
+									<span class="lunar festival">清明</span>
+								</td>
+								<td class="day">
+									<span class="solar">6</span>
+									<span class="lunar">廿九</span>
+								</td>
+								<td class="day">
+									<span class="solar">七</span>
+									<span class="lunar">三月</span>
+								</td>
+								<td class="day workday">
+									<span class="solar">6</span>
+									<span class="lunar">初二</span>
+								</td>
+								<td class="day weekday">
+									<span class="solar">9</span>
+									<span class="lunar">初三</span>
+								</td>
+								<td class="day weekday">
+									<span class="solar">10</span>
+									<span class="lunar">初四</span>
+								</td>
+							</tr>
+						</table>
+					</div>
+					
+					
+					<div id="right-car">
+						<h3>企业行业品牌榜</h3>
 					</div>
 				</section>
 			</div>

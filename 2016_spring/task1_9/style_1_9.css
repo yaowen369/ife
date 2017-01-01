@@ -588,7 +588,7 @@ aside ul .menu_6{
 #first-prj-wrapper{
 	box-sizing: border-box;
 	width: 100%;
-	border: 1px #0000FF dotted;
+
 	margin-top: 20px;
 }
 
@@ -609,7 +609,7 @@ aside ul .menu_6{
 }
 
 
-#first-prj-table h3, #second-prj-table h3{
+#first-prj-table h3, #second-prj-table h3, #left-calendar h3, #right-car h3{
 	padding: 10px;
 	font-size: 12px;
 	color: #AAAAAA;
@@ -761,4 +761,112 @@ aside ul .menu_6{
 	height: 55px;
 	background-color: #B6B6B6;
 	left: 70px;
+}
+
+#second-prj-box form{
+	display: block;
+	margin-top: 100px;
+	border: 1px solid #B6B6B6;
+	border-bottom: none;
+	border-left: none;
+	border-right: none;
+	padding-top: 5px;
+	margin-right: 30px;
+}
+
+
+#second-prj-box label{
+	font-size: 15px;
+	color: #999;
+}
+
+#second-prj-box input[type=button]{
+	background: #388BC1;
+	padding: 3px 10px;
+	color: white;
+	border-radius: 5px;
+	border: 1px solid transparent;
+	float: right;
+	font-size: 12px;
+}
+
+#car-calendar-wrapper{
+	box-sizing: border-box;
+	width: 100%;
+	height: 360px;
+	margin-top: 20px;
+	border: 1px blue solid;
+}
+
+#left-calendar{
+	box-sizing: border-box;
+	float: left;
+	background-color: white;
+	width: calc(40% - 10px);
+	height: 100%;
+	border-radius: 10px;
+}
+
+
+#left-calendar li{
+	display: inline-block;
+	width: calc(25% - 15px);
+	font-size: 8px;
+	float: left;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+#left-calendar li:first-child{
+	margin-left: 20px;
+}
+
+
+#left-calendar select{
+	box-sizing: border-box;
+	font-size: 10px;
+	width: 100%;
+}
+
+#left-calendar table{
+	margin-left: 20px;
+	
+}
+
+#left-calendar table td{
+	box-sizing: border-box;
+	width: 45px;
+	height: 45px;
+	border: 1px red solid;
+	text-align: center;
+}
+
+#left-calendar .solar{
+	display: block;
+	font-size: 10px;
+	color: #333;
+}
+
+#left-calendar .lunar{
+	display: block;
+	font-size: 10px;
+	color: #333;
+}
+
+#left-calendar .festival{
+	color: #C8171D;
+}
+
+#left-calendar .weekday .lunar{
+	color: #CE3538;
+}
+
+
+#right-car{
+	box-sizing: border-box;
+	float: right;
+	background-color: white;
+	width: calc(60% - 10px);
+	height: 100%;
+	border-radius: 10px;
 }
