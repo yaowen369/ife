@@ -352,10 +352,11 @@
 								</select>
 							</li>
 						</ul>
-						
+						<div class="week-line first-line"></div>
+						<div class="week-line second-line"></div>
 						<table >
 							<!--第一行 星期-->
-							<tr>
+							<tr id="week-row">
 								<td class="week">一</td>
 								<td class="week">二</td>
 								<td class="week">三</td>
@@ -399,14 +400,14 @@
 									<span class="lunar">廿九</span>
 								</td>
 								<td class="day">
-									<span class="solar">七</span>
+									<span class="solar">7</span>
 									<span class="lunar">三月</span>
 								</td>
 								<td class="day workday">
 									<span class="solar">6</span>
 									<span class="lunar">初二</span>
 								</td>
-								<td class="day weekday">
+								<td class="day weekday selected">
 									<span class="solar">9</span>
 									<span class="lunar">初三</span>
 								</td>
@@ -415,12 +416,207 @@
 									<span class="lunar">初四</span>
 								</td>
 							</tr>
+							
+							<!--第四行 11-17-->
+							<tr>
+								<td class="day">
+									<span class="solar">11</span>
+									<span class="lunar">初五</span>
+								</td>
+								<td class="day selected">
+									<span class="solar">12</span12>
+									<span class="lunar">初六</span>
+								</td>
+								<td class="day">
+									<span class="solar">13</span>
+									<span class="lunar">初七</span>
+								</td>
+								<td class="day">
+									<span class="solar">14</span>
+									<span class="lunar">初八</span>
+								</td>
+								<td class="day workday">
+									<span class="solar">15</span>
+									<span class="lunar">初九</span>
+								</td>
+								<td class="day weekday">
+									<span class="solar">16</span>
+									<span class="lunar">初十</span>
+								</td>
+								<td class="day weekday">
+									<span class="solar">17</span>
+									<span class="lunar">十一</span>
+								</td>
+							</tr>
+							
+							
+							<!--第五行 18-24-->
+							<tr>
+								<td class="day">
+									<span class="solar">18</span>
+									<span class="lunar">十二</span>
+								</td>
+								<td class="day selected">
+									<span class="solar">19</span12>
+									<span class="lunar">十三</span>
+								</td>
+								<td class="day">
+									<span class="solar">20</span>
+									<span class="lunar">十四</span>
+								</td>
+								<td class="day">
+									<span class="solar">21</span>
+									<span class="lunar">十五</span>
+								</td>
+								<td class="day workday">
+									<span class="solar">22</span>
+									<span class="lunar">十六</span>
+								</td>
+								<td class="day weekday">
+									<span class="solar">23</span>
+									<span class="lunar">十七</span>
+								</td>
+								<td class="day weekday">
+									<span class="solar">24</span>
+									<span class="lunar">十八</span>
+								</td>
+							</tr>
+							
+							<!--第六行 25-末尾  -->
+							<tr>
+								<td class="day">
+									<span class="solar">25</span>
+									<span class="lunar">十九</span>
+								</td>
+								<td class="day">
+									<span class="solar">26</span12>
+									<span class="lunar">廿十</span>
+								</td>
+								<td class="day">
+									<span class="solar">27</span>
+									<span class="lunar">廿一</span>
+								</td>
+								<td class="day">
+									<span class="solar">28</span>
+									<span class="lunar">廿二</span>
+								</td>
+								<td class="day workday">
+									<span class="solar">29</span>
+									<span class="lunar">廿三</span>
+								</td>
+								<td class="day weekday">
+									<span class="solar">30</span>
+									<span class="lunar">廿四</span>
+								</td>
+								<td class="day weekday">
+									<span class="solar"></span>
+									<span class="lunar"></span>
+								</td>
+							</tr>
 						</table>
 					</div>
 					
 					
 					<div id="right-car">
 						<h3>企业行业品牌榜</h3>
+						<table border="1" bordercolor="#CACBCB">
+							<tr>
+								<th>排名</th>
+								<th>品牌</th>
+								<th>搜索指数</th>
+							</tr>
+							
+							<tr>
+								<td>1</td>
+								<td>大众</td>
+								<td>
+									<span>48912001</span>
+									<progress value="80" max="100"></progress>
+								</td>
+							</tr>
+							
+							<tr>
+								<td>2</td>
+								<td>丰田</td>
+								<td>
+									<span>29307333</span>
+									<progress value="75" max="100"></progress>
+								</td>
+							</tr>
+							
+							<tr>
+								<td>3</td>
+								<td>奥迪</td>
+								<td>
+									<span>23139070</span>
+									<progress value="70" max="100"></progress>
+								</td>
+							</tr>
+							
+							<tr>
+								<td>4</td>
+								<td>本田</td>
+								<td>
+									<span>22885564</span>
+									<progress value="65" max="100"></progress>
+								</td>
+							</tr>
+							
+							<tr>
+								<td>5</td>
+								<td>福特</td>
+								<td>
+									<span>22324792</span>
+									<progress value="60" max="100"></progress>
+								</td>
+							</tr>
+							
+							<tr>
+								<td>6</td>
+								<td>宝马</td>
+								<td>
+									<span>21444077</span>
+									<progress value="55" max="100"></progress>
+								</td>
+							</tr>
+							
+							<tr>
+								<td>7</td>
+								<td>现代</td>
+								<td>
+									<span>20114969</span>
+									<progress value="50" max="100"></progress>
+								</td>
+							</tr>
+							
+							<tr>
+								<td>8</td>
+								<td>起亚</td>
+								<td>
+									<span>19251680</span>
+									<progress value="45" max="100"></progress>
+								</td>
+							</tr>
+							
+							<tr>
+								<td>9</td>
+								<td>奔驰</td>
+								<td>
+									<span>19172837</span>
+									<progress value="40" max="100"></progress>
+								</td>
+							</tr>
+							
+							<tr>
+								<td>10</td>
+								<td>别克</td>
+								<td>
+									<span>18544027</span>
+									<progress value="35" max="100"></progress>
+								</td>
+							</tr>
+							
+						</table>
 					</div>
 				</section>
 			</div>

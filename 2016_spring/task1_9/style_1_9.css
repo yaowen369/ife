@@ -247,7 +247,7 @@ aside ul .menu_6{
 	margin-right: 50px;
 	margin-top: 20px;
 	width: calc(100% - 100px);
-	border: 1px red dashed;
+	/*border: 1px red dashed;*/
 }
 
 #query{
@@ -266,7 +266,7 @@ aside ul .menu_6{
 #query select{
 	position: relative;
 	padding: 4px 8px;
-	border: 1px #CBCBCB solid;
+	/*border: 1px #CBCBCB solid;*/
 	appearance: none;
 	background: url(img/blue_arrow.png) no-repeat right center;
 	padding: 4px  10px;
@@ -354,7 +354,7 @@ aside ul .menu_6{
 	box-sizing: border-box;
 	width: 100%;
 	margin-top: 10px;
-	border: 1px aqua dotted;
+	/*border: 1px aqua dotted;*/
 }
 
 #price-info div{
@@ -478,7 +478,7 @@ aside ul .menu_6{
 
 #statics-wrapper{
 	box-sizing: border-box;
-	border: blueviolet 1px solid;
+	/*border: blueviolet 1px solid;*/
 	margin-top: 20px;
 }
 
@@ -791,11 +791,12 @@ aside ul .menu_6{
 }
 
 #car-calendar-wrapper{
+	position: relative;
 	box-sizing: border-box;
 	width: 100%;
 	height: 360px;
 	margin-top: 20px;
-	border: 1px blue solid;
+	/*border: 1px blue solid;*/
 }
 
 #left-calendar{
@@ -830,15 +831,40 @@ aside ul .menu_6{
 
 #left-calendar table{
 	margin-left: 20px;
+	margin-top: 40px;
+}
+
+
+#left-calendar .week-line{
+	width: 320px;
+	height: 1px;
+	margin-left: 20px;
+	margin-right: 10px;
 	
+}
+
+#left-calendar .first-line{
+	position: absolute;
+	top: 80px;
+	background-color: #A8CFEC;
+}
+
+#left-calendar .second-line{
+	position: absolute;
+	top:120px;
+	background-color: #E1E1E1;
 }
 
 #left-calendar table td{
 	box-sizing: border-box;
 	width: 45px;
 	height: 45px;
-	border: 1px red solid;
 	text-align: center;
+	border: 1px #F6D564;
+}
+
+#left-calendar table td:hover{
+	border-style: solid;
 }
 
 #left-calendar .solar{
@@ -857,8 +883,12 @@ aside ul .menu_6{
 	color: #C8171D;
 }
 
-#left-calendar .weekday .lunar{
+#left-calendar .weekday .solar{
 	color: #CE3538;
+}
+
+#left-calendar .selected{
+	border-style: solid;
 }
 
 
@@ -870,3 +900,43 @@ aside ul .menu_6{
 	height: 100%;
 	border-radius: 10px;
 }
+
+#right-car table{
+	border-collapse: collapse;
+	margin: 20px 30px;
+	width: calc(100% - 60px);
+	font-size: 12px;
+}
+
+#right-car th, #right-car td{
+	height: 23px;
+}
+
+#right-car td:nth-child(1){
+	width: 66px;
+	text-align: center;
+}
+
+#right-car td:nth-child(2){
+	width: 90px;
+	text-align: center;
+}
+
+#right-car td:nth-child(3){
+	
+}
+
+#right-car th:nth-child(3){
+	text-align: left;
+	padding-left: 20px;
+}
+
+#right-car span{
+	padding-left: 20px;
+	display: inline-block;
+	width: 100px;
+}
+
+#right-car progress{
+}
+
