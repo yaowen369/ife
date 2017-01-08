@@ -21,3 +21,4 @@
 ##第二阶段
 主要目标:**了了解、认识、学习、掌握JavaScript** .
  - 任务十三：零基础JavaScript编码（一).（[task2_13](https://github.com/yaowen369/ife/tree/master/2016_spring/task2_13 "yaowen369/ife/tree/master/2016_spring/task2_13")）
+ - 任务十四：零基础JavaScript编码（二.（[task2_14](https://github.com/yaowen369/ife/tree/master/2016_spring/task2_14 "yaowen369/ife/tree/master/2016_spring/task2_14")）
