@@ -26,6 +26,12 @@
 			 * 返回一个数组，格式见函数中示例
 			 */
 			function getData(){
+				var dataLi = document.getElementById("source").getElementsByTagName("li");
+				var dataList = [];
+				for (let i = 0; i<dataLi.length; i++){
+					dataList[i] = dataLi[i].innerHTML;
+					console.log(dataList[i]);
+				}
 				
 			}
 			
@@ -55,6 +61,7 @@
 			
 			function init(){
 				//在这下面给sort-btn绑定一个点击事件，点击时触发btnHandle函数
+				document.getElementById("sort-btn").onclick = btnHandler;
 			}
 			
 			init();
