@@ -1,5 +1,7 @@
 [**点击查看官方任务描述**](http://ife.baidu.com/2016/task/detail?taskId=14)
 
+[**task2-14 本人 Demo**](https://github.com/yaowen369/ife/tree/master/task2_14/index_14.html)
+
 # 任务十四：零基础JavaScript编码（二）
 
 ## 任务目的

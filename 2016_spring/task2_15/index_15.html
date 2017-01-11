@@ -50,16 +50,20 @@
 			 * 返回一个排序后的数组
 			 */
 			function sortAqiData(data){
-				for (let i=0; i<data.length; i++){
-					for (let j=i+1; j<data.length; j++){
-						if (data[i][1] < data[j][1]){
-							var tmp = data[i];
-							data[i] = data[j];
-							data[j] = tmp;
-						}
-					}
-				}
-				return data;
+				return data.sort(function(a, b){
+					return b[1] - a[1];
+				});
+				
+//				for (let i=0; i<data.length; i++){
+//					for (let j=i+1; j<data.length; j++){
+//						if (data[i][1] < data[j][1]){
+//							var tmp = data[i];
+//							data[i] = data[j];
+//							data[j] = tmp;
+//						}
+//					}
+//				}
+//				return data;
 			}
 			
 			/**
