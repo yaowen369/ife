@@ -22,17 +22,26 @@
 		<script type="text/javascript">
 			/**
 			 * getData方法
-			 * 读取id为source的列表，获取其中城市名字以及城市对应的空子质量
+			 * 读取id为source的列表，获取其中城市名字以及城市对应的空气质量
 			 * 返回一个数组，格式见函数中示例
 			 */
 			function getData(){
 				var dataLi = document.getElementById("source").getElementsByTagName("li");
-				var dataList = [];
+				var dataList = new Array();
 				for (let i = 0; i<dataLi.length; i++){
-					dataList[i] = dataLi[i].innerHTML;
-					console.log(dataList[i]);
+					var tmp = new Array();
+					tmp.push(dataLi[i].innerHTML.split("空气质量")[0]);
+					tmp.push(parseInt(dataLi[i].getElementsByTagName("b")[0].innerHTML))
+					dataList.push(tmp);
 				}
 				
+//				for (let i=0; i<dataList.length; i++){
+//					for (let j=0; j<dataList[i].length; j++){
+//						console.log(dataList[i][j]);
+//					}
+//				}
+				
+				return dataList;
 			}
 			
 			/**
@@ -41,7 +50,16 @@
 			 * 返回一个排序后的数组
 			 */
 			function sortAqiData(data){
-				
+				for (let i=0; i<data.length; i++){
+					for (let j=i+1; j<data.length; j++){
+						if (data[i][1] < data[j][1]){
+							var tmp = data[i];
+							data[i] = data[j];
+							data[j] = tmp;
+						}
+					}
+				}
+				return data;
 			}
 			
 			/**
@@ -50,6 +68,17 @@
 			 * 格式见ul中的注释部分
 			 */
 			function render(data){
+				var ul = document.getElementById("resort");
+				for (let i=0; i<data.length; i++){
+					var b = document.createElement("b");
+					b.appendChild(document.createTextNode(data[i][1]));
+					
+					var li = document.createElement("li");
+					var content = document.createTextNode("第" + i + "名：" + data[i][0] + "空气质量:");
+					li.appendChild(content);
+					li.appendChild(b);
+					ul.appendChild(li);
+				}
 				
 			}
 			
@@ -57,6 +86,8 @@
 				var aqiData = getData();
 				aqiData = sortAqiData(aqiData);
 				render(aqiData);
+				var btn = document.getElementById("sort-btn");
+				btn.disabled = true;
 			}
 			
 			function init(){
