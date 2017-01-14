@@ -15,3 +15,10 @@
  - 任务七：实现常见的技术产品官网的页面架构及样式布局 .（[task1_7](https://github.com/yaowen369/ife/tree/master/2016_spring/task1_7 "yaowen369/ife/tree/master/2016_spring/task1_7")）
  - 任务八：响应式网格（栅格化）布局 .（[task1_8](https://github.com/yaowen369/ife/tree/master/2016_spring/task1_8 "yaowen369/ife/tree/master/2016_spring/task1_8")）
  - 任务九：使用HTML/CSS实现一个复杂页面 .（[task1_9](https://github.com/yaowen369/ife/tree/master/2016_spring/task1_9 "yaowen369/ife/tree/master/2016_spring/task1_9")）
+ - 任务十： Flexbox 布局练习. (还没完成，未来补上)
+ - 任务十一：移动Web页面布局实践 .(还没完成，未来补上)
+ - 任务十二：学习CSS 3的新特性 .(还没完成，未来补上)
+##第二阶段
+主要目标:**了了解、认识、学习、掌握JavaScript** .
+ - 任务十三：零基础JavaScript编码（一).（[task2_13](https://github.com/yaowen369/ife/tree/master/2016_spring/task2_13 "yaowen369/ife/tree/master/2016_spring/task2_13")）
+ - 任务十四：零基础JavaScript编码（二.（[task2_14](https://github.com/yaowen369/ife/tree/master/2016_spring/task2_14 "yaowen369/ife/tree/master/2016_spring/task2_14")）
