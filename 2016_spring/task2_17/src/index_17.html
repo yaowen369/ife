@@ -3,19 +3,17 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>IFE task 17</title>
+		<link href="../../common/css/yw_css_reset.css" type="text/css" rel="stylesheet"/>
 		<link href="style_17.css" type="text/css" rel="stylesheet"/>
 		<script src="task_17.js"></script>
 	</head>
 	<body>
 		<fieldset id="form-gra-time">
-			<legend>请选择日期粒度</legend>
-			<label>日<input name="gra-time" value="day" type="radio" checked="checked"></label>
-			<label>周<input name="gra-time" value="week" type="radio"></label>
-			<label>月<input name="gra-time" value="month" type="radio"></label>
-		</fieldset>
-		
-		<fieldset>
-			<legend>请选择查看的城市</legend>
+			<legend>请选择日期粒度及城市</legend>
+			<label><span class="selected">日</span><input name="gra-time" value="day" type="radio" checked="checked"></label>
+			<label><span>周</span><input name="gra-time" value="week" type="radio"></label>
+			<label><span>月</span><input name="gra-time" value="month" type="radio"></label>
+			
 			<select id="city-select">
 				<option>北京</option>
 			</select>

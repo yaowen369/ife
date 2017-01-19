@@ -16,7 +16,7 @@ function getDateStr(dat){
 	var m = dat.getMonth() + 1;
 	m = m<10 ? "0"+m : m;
 	var d = dat.getDay();
-	d = d<10 > "0"+d : d;
+	d = d<10 ? "0"+d : d;
 	return y +"-" + m + "-" +d;
 }
 
