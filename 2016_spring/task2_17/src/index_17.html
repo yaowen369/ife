@@ -10,17 +10,18 @@
 	<body>
 		<fieldset id="form-gra-time">
 			<legend>请选择日期粒度及城市</legend>
-			<label><span class="selected">日</span><input name="gra-time" value="day" type="radio" checked="checked"></label>
+			<label><span class="day-selected">日</span><input name="gra-time" value="day" type="radio" checked="checked"></label>
 			<label><span>周</span><input name="gra-time" value="week" type="radio"></label>
 			<label><span>月</span><input name="gra-time" value="month" type="radio"></label>
 			
 			<select id="city-select">
-				<option>北京</option>
+				<option>黑龙江省</option>
 			</select>
 		</fieldset>
 		
 		<div class="aqi-chart-wrap">
-			
+			<div class="aqi-hint"></div>
+			<div class="aqi-bar" style="height: 100px; width: 20px; background-color: #999; position: absolute; left: 50px;"></div>
 		</div>
 	</body>
 </html>
