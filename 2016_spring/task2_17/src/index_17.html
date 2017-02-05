@@ -5,7 +5,7 @@
 		<title>IFE task 17</title>
 		<link href="../../common/css/yw_css_reset.css" type="text/css" rel="stylesheet"/>
 		<link href="style_17.css" type="text/css" rel="stylesheet"/>
-		<script src="task_17.js"></script>
+		
 	</head>
 	<body>
 		<fieldset id="form-gra-time">
@@ -14,14 +14,22 @@
 			<label><span>周</span><input name="gra-time" value="week" type="radio"></label>
 			<label><span>月</span><input name="gra-time" value="month" type="radio"></label>
 			
-			<select id="city-select">
-				<option>黑龙江省</option>
+			<select id="city-select" onchange="selectChange(this.id)">
+				<!--<option>黑龙江省</option>-->
 			</select>
 		</fieldset>
 		
+		<!--总的高度是600,宽度是 1280-->
 		<div class="aqi-chart-wrap">
-			<div class="aqi-hint"></div>
-			<div class="aqi-bar" style="height: 100px; width: 20px; background-color: #999; position: absolute; left: 50px;"></div>
+			<!--所以这里的位置是属于  550-600之间-->
+			<!--<p id="aqi-title">黑龙江省01-03月每日空气质量报告</p>-->
+			
+			<!-- bottom 的值是 aqi－bar 的height＋10，本身height为40，所以这里高度最高也就是550-->
+			<!--<div class="aqi-hint" style="left: 10px; bottom: 110px;"><p>2016-01-05</p><p>AQI:432</p></div>-->
+			<!--这里的高度最高是500-->
+			<!--<div class="aqi-bar" style="height: 100px; width: 20px; background-color: #999; left: 50px;"></div>-->
 		</div>
+		
+		<script src="task_17.js"></script>
 	</body>
 </html>
