@@ -10,11 +10,11 @@
 	<body>
 		<fieldset id="form-gra-time">
 			<legend>请选择日期粒度及城市</legend>
-			<label><span class="day-selected">日</span><input name="gra-time" value="day" type="radio" checked="checked"></label>
-			<label><span>周</span><input name="gra-time" value="week" type="radio"></label>
-			<label><span>月</span><input name="gra-time" value="month" type="radio"></label>
+			<label><span id="date-day" class="day-selected">日</span><input name="gra-time" value="day" type="radio" checked="checked" onchange="dateChange(this.value)"></label>
+			<label><span id="date-week" >周</span><input name="gra-time" value="week" type="radio" onchange="dateChange(this.value)"></label>
+			<label><span id="date-month">月</span><input name="gra-time" value="month" type="radio" onchange="dateChange(this.value)"></label>
 			
-			<select id="city-select" onchange="selectChange(this.id)">
+			<select id="city-select" onchange="selectChange(this.value)">
 				<!--<option>黑龙江省</option>-->
 			</select>
 		</fieldset>

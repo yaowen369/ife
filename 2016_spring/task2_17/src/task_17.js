@@ -77,6 +77,10 @@ var aqiAllSourceData = {
 	
 };
 
+//我们使用这两个变量来标记 我们所选择的城市以及日期粒度
+var selectCity = null;
+var selectDate = "日";  //这个设定的初始值
+
 //初始化我们的数据结构
 function initDataStruct(){
 	for (var keyCity in aqiSourceData){
@@ -97,7 +101,7 @@ function initDataStruct(){
 		var firstGetMonth = false;
 		
 		for (var keyDate in aqiSourceData[keyCity]){
-			console.log("keyCity=" + keyCity +"\t keyDate=" + keyDate);
+//			console.log("keyCity=" + keyCity +"\t keyDate=" + keyDate);
 			countValue += aqiSourceData[keyCity][keyDate];
 			countDay++;
 			var dat = new Date(keyDate);
@@ -167,17 +171,51 @@ function initUi(){
 	//城市选择的select
 	var citySelect = document.getElementById("city-select");
 	for (var key in aqiSourceData){
+		if (selectCity === null){
+			selectCity = key;
+		}
+		
 		var optionNode = document.createElement("option");
 		optionNode.appendChild(document.createTextNode(key));
+		optionNode.setAttribute("value", key);
 		citySelect.appendChild(optionNode);
 	}
 }
 
-function selectChange(id){
-	
+function selectChange(value){
+	console.log("选中 " + value);
+	selectCity = value;
 }
 
-//开始 流程进行方法
+function dateChange(value){
+//	console.log("日期 " + value);
+	switch(value){
+		case "day":
+			console.log("switch day");
+			selectDate = "日";
+			document.getElementById("date-day").classList.add("day-selected");
+			document.getElementById("date-week").classList.remove("day-selected");
+			document.getElementById("date-month").classList.remove("day-selected");
+			break;
+		case "week":
+			console.log("switch week");
+			selectDate = "周";
+			document.getElementById("date-day").classList.remove("day-selected");
+			document.getElementById("date-week").classList.add("day-selected");
+			document.getElementById("date-month").classList.remove("day-selected");
+			break;
+		case "month":
+			console.log("switch month");
+			selectDate = "月";
+			document.getElementById("date-day").classList.remove("day-selected");
+			document.getElementById("date-week").classList.remove("day-selected");
+			document.getElementById("date-month").classList.add("day-selected");
+			break;
+			default:
+	}
+}
+
+//开始 整个流程
 function start(){
 	initDataStruct();
 	initUi();

@@ -54,6 +54,11 @@ body{
 	color: #F2F2F2;
 }
 
+/*#form-gra-time .day-no-selected{
+	background-color: white;
+	color: black;
+}*/
+
 #form-gra-time label:first-of-type{
 	margin-left: 100px;
 }
