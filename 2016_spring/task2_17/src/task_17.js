@@ -37,6 +37,17 @@ var aqiAllSourceData = {
 }
 **/
 
+//计算一个对象的属性的长度
+function length(obj){
+	var count = 0;
+	for (var i in obj){
+		if (obj.hasOwnProperty(i)){
+			count++;
+		}
+	}
+	return count;
+}
+
 //以下两个函数用语随机模拟生成测试数据
 function getDateStr(dat){
 	var y = dat.getFullYear();
@@ -52,7 +63,7 @@ function randomBuildData(seed){
 	var dat = new Date("2016-01-01");
 	var datStr = "";
 //	const N = 92;
-	const N = 8;
+	const N = 50;
 	for (let i=0; i<N; i++){
 		datStr = getDateStr(dat);
 		returnData[datStr] = Math.ceil(Math.random() * seed);
@@ -80,6 +91,9 @@ var aqiAllSourceData = {
 //我们使用这两个变量来标记 我们所选择的城市以及日期粒度
 var selectCity = null;
 var selectDate = "日";  //这个设定的初始值
+
+const barWrapperTotalWidth = 1280;
+const barMaxHeight = 50;
 
 //初始化我们的数据结构
 function initDataStruct(){
@@ -215,10 +229,44 @@ function dateChange(value){
 	}
 }
 
+//开始柱形图的绘制和计算
+function calacAndDrawBar(){
+	var sourceData = aqiAllSourceData[selectCity][selectDate];
+	var barWrapper = document.getElementById("bar_wrapper");
+	
+	var barCount = length(sourceData);
+	var barWidth = barWrapperTotalWidth / (barCount * 2 - 1);
+	console.log("barCount=" + barCount + "\t barWidth=" + barWidth);
+	
+	barWrapper.innerHTML += ("<p id=\"aqi-title\">") + getTitleText() + "</p>";
+	
+	var count = 0;
+	for (var key in sourceData){
+		
+		
+		
+		barWrapper.innerHTML += ("<div class=\"aqi-bar\" style=\"height: "
+			+ sourceData[key] +"px;" + " width: " + Math.abs(barWidth) +"px;"
+			+ "background-color: #999;" + "left:"
+			+ Math.abs(barWidth*2*count) + "px;\"/>");
+			
+			var logMsg = "left=" + barWidth*2*count + "  count=" + count;
+			console.log(logMsg);
+			count++;
+	}
+	
+}
+
+//得到 aqi-title 中的文字内容
+function getTitleText(){
+	return selectCity + "01-03月每" + selectDate + "空气质量报告";
+}
+
 //开始 整个流程
 function start(){
 	initDataStruct();
 	initUi();
+	calacAndDrawBar();
 }
 
 
