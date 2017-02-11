@@ -48,6 +48,12 @@ function length(obj){
 	return count;
 }
 
+//得到一个随机的颜色值
+function randomColor(){
+	var color = "#"+Math.floor(Math.random()*16777215).toString(16);
+	return color;
+}
+
 //以下两个函数用语随机模拟生成测试数据
 function getDateStr(dat){
 	var y = dat.getFullYear();
@@ -63,7 +69,7 @@ function randomBuildData(seed){
 	var dat = new Date("2016-01-01");
 	var datStr = "";
 //	const N = 92;
-	const N = 50;
+	const N = 1;
 	for (let i=0; i<N; i++){
 		datStr = getDateStr(dat);
 		returnData[datStr] = Math.ceil(Math.random() * seed);
@@ -238,23 +244,85 @@ function calacAndDrawBar(){
 	var barWidth = barWrapperTotalWidth / (barCount * 2 - 1);
 	console.log("barCount=" + barCount + "\t barWidth=" + barWidth);
 	
-	barWrapper.innerHTML += ("<p id=\"aqi-title\">") + getTitleText() + "</p>";
+//	barWrapper.innerHTML += ("<p id=\"aqi-title\">") + getTitleText() + "</p>";
 	
 	var count = 0;
+
 	for (var key in sourceData){
 		
+		var barLeftPosition = Math.ceil(barWidth*2*count);
+		var hintLeftPosition = Math.ceil(barLeftPosition - (100-barWidth)/2);
+		
+		//最左边的进行处理
+		if (hintLeftPosition < 0){
+			hintLeftPosition = 0;
+		}
+		if ((hintLeftPosition+100) >= 1280){
+			hintLeftPosition = 1180;
+		}
+		
+		var hintStr = ("<div " + "id=\"" +  ("hintId" + count) + "\""
+				+ " class=\"aqi-hint\"  "
+				+ "style=\"left: " + hintLeftPosition + "px;  "
+				+ "bottom: " + (sourceData[key] + 10) + "px;\">"
+				+ "<p>" + (key) + "</p>"
+				+ "<p>AQI:" + (sourceData[key]) + "</p>" + "</div>");
+				
+		console.log(hintStr);
+//		barWrapper += hintStr;		
+		
+//		barWrapper.innerHTML += ("<div" + "id=\"" +  ("hintId" + count) + "\""
+//				+ " class=\"aqi-hint\"  "
+//				+ "style=\"left: " + hintLeftPosition + "px; "
+//				+ "bottom: " + (sourceData[key] + 10) + "px;\">"
+//				+ "<p>" + (key) + "</p>"
+//				+ "<p>AQI:" + (sourceData[key]) + "</p>" + "</div>");
 		
 		
-		barWrapper.innerHTML += ("<div class=\"aqi-bar\" style=\"height: "
-			+ sourceData[key] +"px;" + " width: " + Math.abs(barWidth) +"px;"
-			+ "background-color: #999;" + "left:"
-			+ Math.abs(barWidth*2*count) + "px;\"/>");
+		
+		var barStr = ("<div class=\"aqi-bar\" style=\"height: "
+			+ sourceData[key] +"px;" + " width: " + Math.ceil(barWidth) +"px; "
+			+ "background-color: " + randomColor() + "; "
+			+ "left: " + barLeftPosition + "px;\"  "
+			+ "onmouseover=\"mouseOver(" + count + ")\"  "
+			+ "onmouseout=\"mouseOut(" + count + ")\""
+			+ "/>");
+			console.log(barStr);
+			barWrapper.innerHTML += barStr;
+			
+			
+//		barWrapper.innerHTML += ("<div class=\"aqi-bar\" style=\"height: "
+//			+ sourceData[key] +"px;" + " width: " + Math.ceil(barWidth) +"px;"
+//			+ "background-color: " + randomColor() + ";"
+//			+ "left:" + barLeftPosition + "px;\"" + 
+//			+ "onmouseover=\"mouseOver(" + count + ")\""
+//			+ "onmouseout=\"mouseOut(" + count + ")\""
+//			+ "/>");
 			
 			var logMsg = "left=" + barWidth*2*count + "  count=" + count;
-			console.log(logMsg);
+//			console.log(logMsg);
 			count++;
 	}
 	
+	
+//	barWrapper = "<div id=\"hintId0\" class=\"aqi-hint\"  style=\"left: 590px;  bottom: 252px;\"><p>2016-01-01</p><p>AQI:242</p></div>" 
+//				+  "<div class=\"aqi-bar\" style=\"height: 242px; width: 1280px; background-color: #1db199; left: 0px;\"  onmouseover=\"mouseOver(0)\"  onmouseout=\"mouseOut(0)\"/>";
+	
+//	barWrapper =   "<div class=\"aqi-bar\" style=\"height: 242px; width: 1280px; background-color: #1db199; left: 0px;\"  onmouseover=\"mouseOver(0)\"  onmouseout=\"mouseOut(0)\"/>";
+}
+
+//当鼠标移动到物体上面时
+function mouseOver(count){
+	var idName = "hintId" + count;
+	console.log("mouseOver() count = " + count + "\t idName=" + idName);
+	document.getElementById(idName).style.visibility = "visible"
+}
+
+//当鼠标离开时
+function mouseOut(count){
+	var idName = "hintId" + count;
+	console.log("mouseOut() count = " + count  + "\t idName=" + idName);
+	document.getElementById(idName).style.visibility = "hidden"
 }
 
 //得到 aqi-title 中的文字内容
@@ -262,11 +330,20 @@ function getTitleText(){
 	return selectCity + "01-03月每" + selectDate + "空气质量报告";
 }
 
+function test(){
+	count = 1;
+	var idName = "hintId" + count;
+	console.log("test() count = " + count  + "\t idName=" + idName);
+	document.getElementById(idName).style.visibility = "hidden"
+}
+
 //开始 整个流程
 function start(){
 	initDataStruct();
 	initUi();
-	calacAndDrawBar();
+//	calacAndDrawBar();
+	console.log("1111111111111");
+	console.log(document.getElementById("bar_wrapper").innerHTML);
 }
 
 

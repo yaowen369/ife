@@ -21,14 +21,23 @@
 		
 		<!--总的高度是600,宽度是 1280-->
 		<div id="bar_wrapper" class="aqi-chart-wrap">
-			<!--所以这里的位置是属于  550-600之间-->
+			<!--<div id="hintId0" class="aqi-hint"  style="left: 590px;  bottom: 252px;"><p>2016-01-01</p><p>AQI:242</p></div>
+			<div class="aqi-bar" style="height: 242px; width: 1280px; background-color: #1db199; left: 0px;"  onmouseover="mouseOver(0)"  onmouseout="mouseOut(0)"/>-->
+		</div>
+		
+		
+		<!--所以这里的位置是属于  550-600之间-->
 			<!--<p id="aqi-title">黑龙江省01-03月每日空气质量报告</p>-->
 			
 			<!-- bottom 的值是 aqi－bar 的height＋10，本身height为40，所以这里高度最高也就是550-->
-			<!--<div class="aqi-hint" style="left: 10px; bottom: 110px;"><p>2016-01-05</p><p>AQI:432</p></div>-->
+			<!--本身的 width：100px-->
+			<!--这里的id， 其实应该是hintId1,hintId90 之类的-->
+			<!--<div id="hintId*" class="aqi-hint" style="left: 10px; bottom: 110px;"><p>2016-01-05</p><p>AQI:432</p></div>-->
 			<!--这里的高度最高是500-->
-			<!--<div class="aqi-bar" style="height: 100px; width: 20px; background-color: #999; left: 50px;"></div>-->
-		</div>
+			<!--<div class="aqi-bar" style="height: 100px; width: 20px; background-color: #999; left: 50px;"  onmouseover="mouseOver(count)" onmouseout="mouseOut(count)"/>-->
+		
+		<!--<div id="hintId0" class="aqi-hint"  style="left: 0px;  bottom: 390px;"><p>2016-01-01</p><p>AQI:380</p></div>-->
+        <!--<div class="aqi-bar" style="height: 380px; width: 86px; background-color: #847146; left: 0px;"  onmouseover="mouseOver(0)"  onmouseout="mouseOut(0)"/>-->
 		
 		<script src="task_17.js"></script>
 	</body>
