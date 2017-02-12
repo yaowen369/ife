@@ -31,20 +31,36 @@
 //8 };
 
 
-var a = {a:1,b:2,c:3,d:4};
+//var a = {a:1,b:2,c:3,d:4};
+//
+//function length(obj){
+//	var count = 0;
+//	for (var i in obj){
+//		if (obj.hasOwnProperty(i)){
+//			console.log( i +" = " + obj[i]);
+//			count++;
+//		}
+//	}
+//	return count;
+//}
+//
+//console.log(length(a));  
 
-function length(obj){
+function test(){
 	var count = 0;
-	for (var i in obj){
-		if (obj.hasOwnProperty(i)){
-			console.log( i +" = " + obj[i]);
-			count++;
+	while(count < 10000){
+		var num = Math.ceil(Math.random()*10)-1;
+		if (num>=10 || num<0){
+			console.log("num = " +num);
 		}
+		count++;
 	}
-	return count;
+	console.log("over ");
 }
 
-console.log(length(a));  
+test();
+
+
 
 
 

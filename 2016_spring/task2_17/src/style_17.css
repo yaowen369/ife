@@ -54,10 +54,6 @@ body{
 	color: #F2F2F2;
 }
 
-/*#form-gra-time .day-no-selected{
-	background-color: white;
-	color: black;
-}*/
 
 #form-gra-time label:first-of-type{
 	margin-left: 100px;
@@ -76,13 +72,6 @@ body{
 	font-size: .75em;
 	letter-spacing: 10px;
 	padding-left: 10px;
-}
-
-
-.aqi-chart-wrap div{
-	/*width: 20px;
-	background-color: red;*/
-	/*height: 100px;*/
 }
 
 

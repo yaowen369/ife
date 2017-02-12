@@ -48,10 +48,13 @@ function length(obj){
 	return count;
 }
 
+var colors = ['#16324a', '#24385e', '#393f65', '#4e4a67', '#5a4563', 
+              '#edae9e', '#c1b9c2', '#bec3cb', '#9ea7bb', '#99b4ce'];
+
 //得到一个随机的颜色值
 function randomColor(){
-	var color = "#"+Math.floor(Math.random()*16777215).toString(16);
-	return color;
+//	var color = "#"+Math.floor(Math.random()*16777215).toString(16);
+	return colors[Math.ceil(Math.random()*10)-1];
 }
 
 //以下两个函数用语随机模拟生成测试数据
@@ -68,8 +71,8 @@ function randomBuildData(seed){
 	var returnData = {};
 	var dat = new Date("2016-01-01");
 	var datStr = "";
-//	const N = 92;
-	const N = 1;
+	const N = 92;
+//	const N = 2;
 	for (let i=0; i<N; i++){
 		datStr = getDateStr(dat);
 		returnData[datStr] = Math.ceil(Math.random() * seed);
@@ -104,6 +107,8 @@ const barMaxHeight = 50;
 //初始化我们的数据结构
 function initDataStruct(){
 	for (var keyCity in aqiSourceData){
+		var cityDataLength = length(aqiSourceData[keyCity]);
+		
 		//生成 "日" 的数据
 		var dayObject = new Object();
 		for (var keyDate in aqiSourceData[keyCity]){
@@ -116,25 +121,22 @@ function initDataStruct(){
 		var countValue = 0;
 		var countDay = 0;
 		var countWeek = 1;
-		var oldMonth = 0;
+		var oldMonth = -1;
 		
 		var firstGetMonth = false;
 		
 		for (var keyDate in aqiSourceData[keyCity]){
 //			console.log("keyCity=" + keyCity +"\t keyDate=" + keyDate);
-			countValue += aqiSourceData[keyCity][keyDate];
-			countDay++;
 			var dat = new Date(keyDate);
 //			Date dat = new Date("2016-01-03");
 			
-			if (!firstGetMonth){
+			if (oldMonth === -1){
 				oldMonth = dat.getMonth();
-				firstGetMonth = true;
 			}
 			
 			if (dat.getMonth() != oldMonth){ //该周还没计算完成呢，就到下一月了，那么剩余到这几天也算是单独一周
-				var keyStr = dat.getFullYear() + "-" + (dat.getMonth()+1) + "月第" + countWeek + "周";
-				weekObject[keyStr] = countValue / countDay;
+				var keyStr = dat.getFullYear() + "-" + (oldMonth+1) + "月第" + countWeek + "周";
+				weekObject[keyStr] = Math.ceil(countValue / countDay);
 				
 				oldMonth = dat.getMonth();
 				countWeek = 1;
@@ -142,13 +144,22 @@ function initDataStruct(){
 				countDay = 0;
 				continue;
 			}
+			
+			countValue += aqiSourceData[keyCity][keyDate];
+			countDay++;
 
 			if (dat.getDay()  === 6){
 				var keyStr = dat.getFullYear() + "-" + (dat.getMonth()+1) + "月第" + countWeek + "周";
-				weekObject[keyStr] = countValue / countDay;
+				weekObject[keyStr] = Math.ceil(countValue / countDay);
 				countWeek++;
 				countValue = 0;
 				countDay = 0;
+			}
+			
+			//连一周都没满的情况
+			if (countDay === cityDataLength){
+				var keyStr = dat.getFullYear() + "-" + (dat.getMonth()+1) + "月第" + countWeek + "周";
+				weekObject[keyStr] = Math.ceil(countValue / countDay);
 			}
 		}
 		
@@ -166,12 +177,19 @@ function initDataStruct(){
 			countDay2++;
 			countValue2 += aqiSourceData[keyCity][keyDate];
 			
-			if (dat2.getMonth() != oldMonth){
-				var keyStr = dat2.getFullYear() +"-" + (oldMonth+1);
-				monthObject[keyStr] = countValue2/countDay2;
-				countDay2 = 0;
-				countValue2 = 0;
-				oldMonth = dat2.getMonth();
+			if (dat2.getMonth() != oldMonth2){
+				var keyStr = dat2.getFullYear() +"-" + (oldMonth2+1);
+				monthObject[keyStr] = Math.ceil(countValue2/countDay2);
+				//我们要开始计算新的一个月的
+				countDay2 = 1;
+				countValue2 = aqiSourceData[keyCity][keyDate];
+				oldMonth2 = dat2.getMonth();
+			}
+			
+			//只存在一个月的情况,此时已经循环到最后一个了
+			if (cityDataLength === countDay2){
+				var keyStr = dat2.getFullYear() +"-" + (oldMonth2+1);
+				monthObject[keyStr] = Math.ceil(countValue2/countDay2);
 			}
 		}
 		
@@ -205,6 +223,7 @@ function initUi(){
 function selectChange(value){
 	console.log("选中 " + value);
 	selectCity = value;
+	calacAndDrawBar();
 }
 
 function dateChange(value){
@@ -233,6 +252,8 @@ function dateChange(value){
 			break;
 			default:
 	}
+	
+	calacAndDrawBar();
 }
 
 //开始柱形图的绘制和计算
@@ -243,8 +264,9 @@ function calacAndDrawBar(){
 	var barCount = length(sourceData);
 	var barWidth = barWrapperTotalWidth / (barCount * 2 - 1);
 	console.log("barCount=" + barCount + "\t barWidth=" + barWidth);
+	barWrapper.innerHTML = "";
 	
-//	barWrapper.innerHTML += ("<p id=\"aqi-title\">") + getTitleText() + "</p>";
+	barWrapper.innerHTML += ("<p id=\"aqi-title\">") + getTitleText() + "</p>";
 	
 	var count = 0;
 
@@ -269,16 +291,7 @@ function calacAndDrawBar(){
 				+ "<p>AQI:" + (sourceData[key]) + "</p>" + "</div>");
 				
 		console.log(hintStr);
-//		barWrapper += hintStr;		
-		
-//		barWrapper.innerHTML += ("<div" + "id=\"" +  ("hintId" + count) + "\""
-//				+ " class=\"aqi-hint\"  "
-//				+ "style=\"left: " + hintLeftPosition + "px; "
-//				+ "bottom: " + (sourceData[key] + 10) + "px;\">"
-//				+ "<p>" + (key) + "</p>"
-//				+ "<p>AQI:" + (sourceData[key]) + "</p>" + "</div>");
-		
-		
+		barWrapper.innerHTML += hintStr;		
 		
 		var barStr = ("<div class=\"aqi-bar\" style=\"height: "
 			+ sourceData[key] +"px;" + " width: " + Math.ceil(barWidth) +"px; "
@@ -290,25 +303,15 @@ function calacAndDrawBar(){
 			console.log(barStr);
 			barWrapper.innerHTML += barStr;
 			
-			
-//		barWrapper.innerHTML += ("<div class=\"aqi-bar\" style=\"height: "
-//			+ sourceData[key] +"px;" + " width: " + Math.ceil(barWidth) +"px;"
-//			+ "background-color: " + randomColor() + ";"
-//			+ "left:" + barLeftPosition + "px;\"" + 
-//			+ "onmouseover=\"mouseOver(" + count + ")\""
-//			+ "onmouseout=\"mouseOut(" + count + ")\""
-//			+ "/>");
-			
 			var logMsg = "left=" + barWidth*2*count + "  count=" + count;
 //			console.log(logMsg);
 			count++;
+			
+			
 	}
 	
-	
-//	barWrapper = "<div id=\"hintId0\" class=\"aqi-hint\"  style=\"left: 590px;  bottom: 252px;\"><p>2016-01-01</p><p>AQI:242</p></div>" 
-//				+  "<div class=\"aqi-bar\" style=\"height: 242px; width: 1280px; background-color: #1db199; left: 0px;\"  onmouseover=\"mouseOver(0)\"  onmouseout=\"mouseOut(0)\"/>";
-	
-//	barWrapper =   "<div class=\"aqi-bar\" style=\"height: 242px; width: 1280px; background-color: #1db199; left: 0px;\"  onmouseover=\"mouseOver(0)\"  onmouseout=\"mouseOut(0)\"/>";
+	console.log("barWrapper.innerHTML = " + barWrapper.innerHTML);
+
 }
 
 //当鼠标移动到物体上面时
@@ -330,20 +333,12 @@ function getTitleText(){
 	return selectCity + "01-03月每" + selectDate + "空气质量报告";
 }
 
-function test(){
-	count = 1;
-	var idName = "hintId" + count;
-	console.log("test() count = " + count  + "\t idName=" + idName);
-	document.getElementById(idName).style.visibility = "hidden"
-}
 
 //开始 整个流程
 function start(){
 	initDataStruct();
 	initUi();
-//	calacAndDrawBar();
-	console.log("1111111111111");
-	console.log(document.getElementById("bar_wrapper").innerHTML);
+	calacAndDrawBar();
 }
 
 
