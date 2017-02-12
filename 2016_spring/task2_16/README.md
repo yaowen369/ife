@@ -1,6 +1,6 @@
 [**点击查看官方任务描述**](http://ife.baidu.com/2016/task/detail?taskId=16)
 
-[**task2-16 本人 Demo**](https://github.com/yaowen369/ife/tree/master/task2_16/index_16.html)
+[**task2-16 本人 Demo**](https://github.com/yaowen369/ife/tree/master/task2_16/src)
 
 # 任务十六：零基础JavaScript编码（四）
 
