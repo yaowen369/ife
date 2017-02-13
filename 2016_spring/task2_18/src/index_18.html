@@ -2,8 +2,24 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>task2_18</title>
+		<link href="../../common/css/yw_common.css" type="text/css" rel="stylesheet"/>
+		<link href="style_18.css" type="text/css" rel="stylesheet"  />
+		<script src="task_18.js"></script>
 	</head>
 	<body>
+		<form>
+			<input id="inputBox" type="text" style="width: 150px; display: inline-block;"/>
+			<input type="button" value="左侧入" onclick="leftInsertClick()"/>
+			<input type="button" value="右侧入" onclick="rightInsertClick()"/>
+			
+			<input type="button" value="左侧出" style="margin-left: 50px;" onclick="leftOutClick()"/>
+			<input type="button" value="右侧出" onclick="rightOutClick()"/>
+		</form>
+		
+		<div id="boxWrapper">
+			<!--<div class="num-box" onclick="boxClick(this)">123</div>
+			<div class="num-box" onclick="boxClick(this)">456</div>-->
+		</div>
 	</body>
 </html>
