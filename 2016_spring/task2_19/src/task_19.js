@@ -76,7 +76,7 @@ var queue = {
 	},
 	
 	maxPrompt:function(){
-		alert("已经达到了我们的上限制" + this.maxQuantity + "个，不能再添加了")	
+		alert("已经达到了我们的上限制" + this.maxQuantity + "个，不能再添加了")	;
 	},
 
 	emptyPrompt:function(){
@@ -86,7 +86,8 @@ var queue = {
 	debugPrint:function(){
 		console.log(this.arr);
 	}
-};
+	
+}; //end of "var queue = {... "
 
 
 function leftInsertClick(){
