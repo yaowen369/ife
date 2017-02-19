@@ -47,18 +47,16 @@
 //console.log(length(a));  
 
 function test(){
-	var count = 0;
-	while(count < 10000){
-		var num = Math.ceil(Math.random()*10)-1;
-		if (num>=10 || num<0){
-			console.log("num = " +num);
-		}
-		count++;
+	console.log("test()");
+	for (var i = 0; i < 10; ++i) {
+		console.log("i = " + i);
+//  		setTimeout(function () {console.log("result = " +  i)}, 0);
 	}
-	console.log("over ");
 }
 
 test();
+
+
 
 
 

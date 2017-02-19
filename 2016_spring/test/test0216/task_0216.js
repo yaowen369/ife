@@ -1,6 +1,6 @@
 
 
-const N = 5;
+const N = 10;
 var arr = [];
 
 
@@ -19,7 +19,7 @@ function quickSortClick(){
 
 function quickSort(dataArr, low1, high1){
 	var pivotpos = -1;
-	while(low1 < high1){
+	if(low1 < high1){
 		pivotPos = oneQuickSort(dataArr, low1, high1);
 		quickSort(dataArr, low1, pivotPos-1);
 		quickSort(dataArr, pivotPos+1, high1);
