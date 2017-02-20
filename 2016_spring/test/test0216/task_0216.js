@@ -17,6 +17,8 @@ function quickSortClick(){
 	console.log("---------------------------");
 }
 
+
+
 function quickSort(dataArr, low1, high1){
 	var pivotpos = -1;
 	if(low1 < high1){
