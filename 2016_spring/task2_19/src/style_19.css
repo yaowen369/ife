@@ -21,5 +21,14 @@ body{
 	color: white;
 	font-size: 10px;
 	bottom: 0px;
-	
 }
+
+
+.test-div{
+	border: 1px red solid;
+	background-color: blue;
+	display: inline-block;
+	margin-top: 20px;
+	color: white;
+}
+

@@ -131,9 +131,6 @@ var queue = {
 }; //end of "var queue = {... "
 
 
-
-
-
 function leftInsertClick(){
 	var value = getInputValue();
 	if (value != null){
@@ -236,6 +233,24 @@ function oneQuickSort(dataArr, low2, high2){
 	}
 	dataArr[low2] = piovtKey;
 	return low2;
+}
+
+
+//function deleteSelfClick(my){
+//	console.log("enter this deleteSelfClick");
+//	my.parentNode.remove(my);
+//}
+
+function init(){
+//	document.getElementsByClassName("test-div");
+	
+	var nodeList = document.getElementsByClassName("test-div");
+	for (let i=0; i<nodeList.length; i++){
+		nodeList[i].addEventListener("click", function(){
+			console.log("enter add eventListener")
+			console.log(this.innderHTML);
+		});
+	}
 }
 
 
