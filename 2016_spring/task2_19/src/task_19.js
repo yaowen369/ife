@@ -90,6 +90,14 @@ var queue = {
 		this.paint();
 	},
 	
+	//删除第id个数据
+	deleteId:function(id){
+		console.log("delteId  id=" + id);
+		this.arr.splice(id, 1);
+		this.debugPrint();
+		this.paint();
+	},
+	
 	//绘制图形的方法
 	paint:function(){
 		var innerStr = "";
@@ -101,7 +109,10 @@ var queue = {
 		
 //		console.log("innerStr = " + innerStr);
 		document.getElementById("bar-wrapper").innerHTML = innerStr;
+		addListener();
 	},
+	
+	
 	
 	isEmpty:function(){
 		return this.arr.length === 0;
@@ -130,6 +141,31 @@ var queue = {
 	
 }; //end of "var queue = {... "
 
+
+//事件绑定函数，兼容浏览器差异
+function addEvent(element, event, listener) {
+    if (element.addEventListener) {
+        element.addEventListener(event, listener, false);
+    }
+    else if (element.attachEvent) {
+        element.attachEvent("on" + event, listener);
+    }
+    else {
+        element["on" + event] = listener;
+    }
+}
+
+
+
+function addListener(){
+	var container = document.getElementById("bar-wrapper");
+	for (let i=0; i<container.childNodes.length; i++){
+		container.childNodes[i].addEventListener("click", function(){
+			console.log("addListener i= " + i);
+			queue.deleteId(i);
+		});
+	}
+}
 
 function leftInsertClick(){
 	var value = getInputValue();
@@ -236,22 +272,8 @@ function oneQuickSort(dataArr, low2, high2){
 }
 
 
-//function deleteSelfClick(my){
-//	console.log("enter this deleteSelfClick");
-//	my.parentNode.remove(my);
-//}
 
-function init(){
-//	document.getElementsByClassName("test-div");
-	
-	var nodeList = document.getElementsByClassName("test-div");
-	for (let i=0; i<nodeList.length; i++){
-		nodeList[i].addEventListener("click", function(){
-			console.log("enter add eventListener")
-			console.log(this.innderHTML);
-		});
-	}
-}
+
 
 
 
