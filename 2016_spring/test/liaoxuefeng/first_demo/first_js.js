@@ -1,61 +1,58 @@
 'use strict';
 
 
-//Object.prototype.length = function(){
-//	var count = 0 ;
-//	for (var i in this){
-//		count++;
-//	}
-//	return count;
-//};
-//
-//
-//var obj = {
-//	a:1,
-//	b:2,
-//	c:3,
-//	d:4
-//};
-//
-//console.log(obj.length);
+var liaoTest = {
+	xiaoming : {
+		name : 'xiaoming',
+		birth : 1990,
+		middle_school : "No.1 Middle School",
+		print : function () {
+			
+        }
+	},
+
+	print : function () {
+		var str = "";
+		if (arguments.length > 0){
+			str += arguments[0];
+		}
+
+		str += "  name = ";
+		str += this.xiaoming.name;
+		str += "\t schopl = "
+		str += this.xiaoming.middle_school;
+
+		str += "\t score = ";
+		str += this.xiaoming.score;
+
+		console.log(str);
+    },
+
+    test : function () {
+        console.log('middle_school' in this.xiaoming);
+        console.log('toString' in this.xiaoming);
+        console.log('print' in this.xiaoming);
+		// this.print("before delete");
+        //
+        //
+		// delete this.xiaoming.primary_school;
+		// delete this.xiaoming.middle_school;
+		// this.print("after delete");
+
+		// console.log('middle_school' in this.xiaoming);
+
+		var result_1 = this.xiaoming.hasOwnProperty("middle_school");
+		var result_2 = this.xiaoming.hasOwnProperty("toString");
+		var result_3 = this.xiaoming.hasOwnProperty("print");
+		console.log(result_1);
+		console.log(result_2);
+		console.log(result_3);
+
+    }
+};
 
 
-//var a = {a:1,b:2,c:3,d:4};
-//2Object.prototype.length = function(){
-//3     var count = 0;
-//4     for(var i in this){
-//5         count ++;
-//6     }
-//7     return count;
-//	return 1;
-//8 };
-
-
-//var a = {a:1,b:2,c:3,d:4};
-//
-//function length(obj){
-//	var count = 0;
-//	for (var i in obj){
-//		if (obj.hasOwnProperty(i)){
-//			console.log( i +" = " + obj[i]);
-//			count++;
-//		}
-//	}
-//	return count;
-//}
-//
-//console.log(length(a));  
-
-function test(){
-	console.log("test()");
-	for (var i = 0; i < 10; ++i) {
-		console.log("i = " + i);
-//  		setTimeout(function () {console.log("result = " +  i)}, 0);
-	}
-}
-
-test();
-
+window.onload = liaoTest.test();
 
 
 
