@@ -1,0 +1,34 @@
+html{
+    width: 100%;
+    height: 100%;
+    background: chartreuse;
+}
+
+body{
+    width: 1280px;
+    height: 100%;
+    background: white;
+}
+
+textarea{
+    height: 80px;
+    width: 160px;
+}
+
+input[type=button]{
+    width: 50px;
+}
+
+input[type=text]{
+    width: 150px;;
+}
+
+
+.box{
+    background: #FFB0BF;
+    line-height: 30px;
+    display: inline-block;
+    margin-right:10px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
