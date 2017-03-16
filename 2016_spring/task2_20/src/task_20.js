@@ -3,9 +3,11 @@
  */
 
 
-window.onload = task20();
+window.onload = function () {
 
-function task20() {
+    //验证 中文，英文，阿拉伯数字的 正则表达式
+    // const  reg = "^[a-zA-Z0-9\u4e00-\u9fa5]+$";
+    const  reg = "[^a-zA-Z]";
 
     run();
 
@@ -19,12 +21,21 @@ function task20() {
 
 
     function insertBtnClick() {
-        var inputStr = document.getElementsByTagName("textarea")[0].nodeValue;
+        var inputStr = document.getElementsByTagName("textarea")[0].value;
         console.log("inputStr = " + inputStr);
+        var words = inputStr.split(/[^a-zA-Z]/);
+        var tmp = "";
+        for (let i=0; i<words.length; i++){
+            tmp += words[i];
+            console.log("i=" + i + "\t" + words[i]);
+            tmp += "\t";
+        }
+        console.log("----------------");
+        console.log(tmp);
     }
 
     function queryBtnClick() {
-        var queryStr = document.getElementsByTagName("input")[2].nodeValue;
+        var queryStr = document.getElementsByTagName("INPUT")[2].value;
         console.log("queryStr = " + queryStr);
     }
 
