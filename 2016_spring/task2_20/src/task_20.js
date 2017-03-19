@@ -5,10 +5,6 @@
 
 window.onload = function () {
 
-    //验证 中文，英文，阿拉伯数字的 正则表达式
-    // const  reg = "^[a-zA-Z0-9\u4e00-\u9fa5]+$";
-    const  reg = "[^a-zA-Z]";
-
     run();
 
     //执行的总方法
@@ -21,17 +17,18 @@ window.onload = function () {
 
 
     function insertBtnClick() {
+        var splitStrArr = [];
         var inputStr = document.getElementsByTagName("textarea")[0].value;
         console.log("inputStr = " + inputStr);
-        var words = inputStr.split(/[^a-zA-Z]/);
-        var tmp = "";
+        var words = inputStr.split(/[^a-zA-Z0-9\u4e00-\u9fa5]/);
         for (let i=0; i<words.length; i++){
-            tmp += words[i];
-            console.log("i=" + i + "\t" + words[i]);
-            tmp += "\t";
+            //有时候分割会造成 空格内容，所以这里过滤一下
+            if (words[i].length !== 0){
+                splitStrArr[splitStrArr.length] = words[i];
+            }
         }
-        console.log("----------------");
-        console.log(tmp);
+        createBox(splitStrArr);
+       
     }
 
     function queryBtnClick() {
@@ -39,6 +36,17 @@ window.onload = function () {
         console.log("queryStr = " + queryStr);
     }
 
+    function createBox(strs) {
+        var contentDiv = document.getElementById("content-div");
+
+        for (let i=0; i<strs.length; i++){
+            console.log("i=" + i + "\t " + strs[i]);
+            var elem = document.createElement("p");
+            elem.appendChild(document.createTextNode(strs[i]));
+            elem.className = "box";
+            contentDiv.appendChild(elem);
+        }
+    }
 
 
 
