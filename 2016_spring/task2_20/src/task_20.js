@@ -34,6 +34,17 @@ window.onload = function () {
     function queryBtnClick() {
         var queryStr = document.getElementsByTagName("INPUT")[2].value;
         console.log("queryStr = " + queryStr);
+
+
+        var boxes = document.getElementsByClassName("box");
+
+        for (let i=0; i<boxes.length; i++){
+            var text = boxes[i].childNodes[0].nodeValue;
+            if (text.indexOf(queryStr) >= 0){
+                console.log("text = " + text);
+                boxes[i].setAttribute("style", "color: red");
+            }
+        }
     }
 
     function createBox(strs) {
