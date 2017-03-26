@@ -31,18 +31,47 @@ window.onload = function () {
        
     }
 
+    /**
+     * bug 重现过程，先搜ab，再搜ac
+     */
     function queryBtnClick() {
         var queryStr = document.getElementsByTagName("INPUT")[2].value;
         console.log("queryStr = " + queryStr);
 
+        //先进行一遍遍历，把内容当中包含span的给去掉，这样避免混乱
+        var spanes = document.getElementsByTagName("SPAN");
 
+        /**
+         * 这句话，在 下面的html进行转化之后，为什么这里的spanes，length，直接就把长度减1了。
+         */
+        // for (let i=0; i<spanes.length; i++){
+
+        for (let i=0; i<spanes.length; i++){
+            var spanText = spanes[i].childNodes[0].nodeValue;
+            var spanParent = spanes[i].parentNode;
+            var parentText = spanParent.innerHTML;
+
+            parentText = parentText.replace(/<span.*span>/, spanText);
+
+            spanParent.innerHTML = parentText;
+
+        }
+
+        //再把包含选中内容的部分 设置span
         var boxes = document.getElementsByClassName("box");
-
         for (let i=0; i<boxes.length; i++){
             var text = boxes[i].childNodes[0].nodeValue;
+            console.log("text = " + text);
             if (text.indexOf(queryStr) >= 0){
-                console.log("text = " + text);
-                boxes[i].setAttribute("style", "color: red");
+
+                var boxInnder = boxes[i].innerHTML;
+
+                console.log("before boxInnder = " + boxInnder);
+                boxInnder = boxInnder.replace(queryStr, "<span class='matching'>" + queryStr + "</span>");
+
+                console.log("after boxInnder = " + boxInnder);
+                // boxes[i].setAttribute("style", "color: red");
+                boxes[i].innerHTML = boxInnder;
             }
         }
     }
@@ -58,7 +87,5 @@ window.onload = function () {
             contentDiv.appendChild(elem);
         }
     }
-
-
 
 };
