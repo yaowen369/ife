@@ -1,0 +1,34 @@
+body{
+	width: 1280px;
+	background: white;
+}
+
+#bar-wrapper{
+	position: relative;
+	width: 100%;
+	height: 200px;
+	border: 1px blue solid;
+	margin-top: 30px;
+}
+
+.bar-style{
+	position: absolute;
+	display: inline-block;
+	background: red;
+	width:15px;
+	/*height: 200px;*/
+	text-align: center;
+	color: white;
+	font-size: 10px;
+	bottom: 0px;
+}
+
+
+.test-div{
+	border: 1px red solid;
+	background-color: blue;
+	display: inline-block;
+	margin-top: 20px;
+	color: white;
+}
+

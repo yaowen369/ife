@@ -1,4 +1,4 @@
-[**点击查看官方任务描述**](http://ife.baidu.com/task/detail?taskId=8)
+[**点击查看官方任务描述**](http://ife.baidu.com/2016/task/detail?taskId=8)
 
 # 任务八：响应式网格（栅格化）布局
 

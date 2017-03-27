@@ -1,4 +1,4 @@
-[**点击查看官方任务描述**](http://ife.baidu.com/task/detail?taskId=6)
+[**点击查看官方任务描述**](http://ife.baidu.com/2016/task/detail?taskId=6)
 
 # 任务六：通过HTML及CSS模拟报纸排版
 

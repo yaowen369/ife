@@ -1,4 +1,4 @@
-[**点击查看官方任务描述**](http://ife.baidu.com/task/detail?taskId=9)
+[**点击查看官方任务描述**](http://ife.baidu.com/2016/task/detail?taskId=9)
 
 # 任务九：使用HTML/CSS实现一个复杂页面
 

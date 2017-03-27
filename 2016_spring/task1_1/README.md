@@ -1,4 +1,4 @@
-[**点击查看官方任务描述**](http://ife.baidu.com/task/detail?taskId=1)
+[**点击查看官方任务描述**](http://ife.baidu.com/2016/task/detail?taskId=1)
 
 # 任务一：零基础HTML编码
 

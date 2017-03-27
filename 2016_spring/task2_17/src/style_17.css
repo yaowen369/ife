@@ -1,0 +1,121 @@
+html{
+	width: 100%;
+	background: white;
+}
+
+
+body{
+	width: 1280px;
+	margin: 0 auto;
+	border: 1px red dotted;
+}
+
+
+#form-gra-time {
+	border-color: #6C6C6C;
+	border-radius: 10px;
+	width: 100%;
+	height: 100px;
+}
+
+#form-gra-time label{
+	position: relative;
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	margin: 10px;
+}
+
+
+#form-gra-time label span{
+	position: relative;
+	color: black;
+	display: block;
+	border-radius: 50%;
+	border: 1px #16324A solid;
+	width: 100%;
+	height: 100%;
+	line-height: 50px;
+	text-align: center;
+}
+
+#form-gra-time label input{
+	position: absolute;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	z-index: -1;
+}
+
+
+#form-gra-time .day-selected{
+	background-color: #16324A;
+	color: #F2F2F2;
+}
+
+
+#form-gra-time label:first-of-type{
+	margin-left: 100px;
+}
+
+#form-gra-time select{
+	margin-left: 100px;
+	box-sizing: border-box;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background-color: #fffff;
+	width: 110px;
+	line-height: 25px;
+	text-align: center;
+	font-size: .75em;
+	letter-spacing: 10px;
+	padding-left: 10px;
+}
+
+
+.aqi-chart-wrap{
+	position: relative;
+	width: 100%;
+	height: 600px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-top: 50px;
+}
+
+
+#aqi-title{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	padding-top: 20px;
+	color: black;
+	font-size: 15px;
+}
+
+.aqi-hint{
+	position: absolute;
+	display: inline-block;
+	width: 100px;
+	height: 40px;
+	border: 1px solid #333;
+	border-radius: 5px;
+	z-index: 999;
+	visibility: hidden;
+}
+
+.aqi-hint p{
+	font-size: 13px;
+	text-align: center;
+	color: #333;
+}
+
+.aqi-hint P:last-child{
+	margin-top: 6px;
+}
+
+.aqi-bar{
+	position: absolute;
+	bottom: 0px;
+}
