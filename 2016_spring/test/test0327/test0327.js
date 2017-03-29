@@ -27,3 +27,13 @@ function changeOnClick2() {
         spanParent.innerHTML = parentText;
     }
 }
+
+function test() {
+    var a = 1;
+    a++;
+    a = setTimeout(function () {
+        var b = 2;
+    }, 3000);
+    alert(++a);
+    console.log(a);
+}
