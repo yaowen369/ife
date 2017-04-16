@@ -4,7 +4,7 @@
 
 function changeOnClick() {
     var spanes = document.getElementsByTagName("SPAN");
-    //ArrayLike
+    //Array Like
     spanes = Array.prototype.slice.call(spanes);
     for (let i=0; i<spanes.length; i++){
         var spanText = spanes[i].childNodes[0].nodeValue;
@@ -33,7 +33,7 @@ function changeOnClick2() {
 function test() {
     var a = 1;
     a++;
-    setTimeout(function () {
+    a = setTimeout(function () {
         var a = 2;
     }, 3000);
     alert(++a);

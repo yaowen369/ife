@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index 0416</title>
+</head>
+<body>
+<div>
+    <div>
+        <div>
+            <lable>请输入员工编号</lable>
+            <input id="keyWord" type="text">
+        </div>
+
+        <div>
+            <lable>请输入员工姓名</lable>
+            <input id="staffName" type="text">
+        </div>
+        <div>
+            <button id="save">保存</button>
+        </div>
+
+    </div>
+
+</div>
+<script>
+    var keyword=document.getElementById("keyWord");
+    var name=document.getElementById("staffName");
+    var save=document.getElementById("save");
+
+    console.log("enter script, ==1==" + "\t keyword=" + keyword +
+        "\t keyword.value = " +keyword.value);
+
+    var keyValue = keyword.value;
+    if (keyValue === ""){
+        console.log("===");
+    }else {
+        console.log("!==");
+    }
+
+    console.log("enter script --2--, " + "\t name=" + name +
+        "\t name.value = " +name.value);
+
+
+
+    //新建员工
+    save.onclick=function(){
+
+        console.log("save.onclick(), >>3<<" + "\t keyword=" + keyword +
+            "\t keyword.value = " +keyword.value);
+
+
+        console.log("save.onclick(), ##4## " + "\t name=" + name +
+            "\t  name.value = " +name.value);
+        console.log("save.onclick(), " + "document.getElementById('staffName').value = " + document.getElementById("staffName").value);
+
+
+
+    }
+</script>
+</body>
+</body>
+</html>
