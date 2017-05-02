@@ -15,7 +15,36 @@ window.onload = function () {
         var Node = function (element) {
             this.element = element;
             this.next = null;
-        }
+        };
+
+        var length = 0;
+        var head = null;
+        var maxQuantity = 10;
+
+        this.append = function () {
+
+        };
+
+        this.removeElement = function(element){
+
+        };
+
+        //删除 第一个元素
+        this.remove = function () {
+            
+        };
+
+        this.size = function () {
+
+        };
+
+        this.isMaxLength = function () {
+
+        };
+
+        this.isRepeat = function () {
+
+        };
     }
    
 };
