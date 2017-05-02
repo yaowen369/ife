@@ -1,0 +1,56 @@
+html{
+    background: lightblue;
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    width: 1280px;
+    height: 100%;
+    background-color: white;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+input[type="text"], textarea{
+    border: deepskyblue 1px solid;
+    border-radius: 20px;
+    width: 200px;
+    height:50px;
+}
+
+
+#tag-div{
+    margin-left: 20px;
+}
+
+#fav-div{
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+input[type="submit"]{
+    padding:20px;
+    font-size: 20px;
+    margin-left:20px;
+}
+
+.common{
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    color: white;
+    text-align: center;
+    line-height: 120px;
+    margin: 10px;
+}
+
+.content{
+    background-color: #6495ED;
+}
+
+.delete-content{
+    background-color: #90EE90;
+}
+

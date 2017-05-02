@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>栈的创建</title>
+</head>
+<body>
+<p>创建一个栈</p>
+
+<script>
+    function Stack(){
+        var items=[];
+        this.push=function(element){
+            console.log("before push -> " + items);
+            items.push(element);
+            console.log("after push -> " + items);
+        };
+        this.pop=function(){
+            console.log("before pop -> " + items);
+            items.pop();
+            console.log("after pop -> " + items);
+            console.log(" pop()中，弹出一个数 = " + items.pop());
+        }
+        this.peek=function(){
+            return items[items.length-1]
+        }
+        this.size=function(){
+            return items.length;
+        }
+        this.clear=function(){
+            items=[];
+        }
+        this.isEmpty=function(){
+            return items.length===0;
+        }
+        this.print=function(){
+            console.log(items.toString());
+        }
+    }// stack over
+    var stack=new Stack();
+    // console.log(stack.isEmpty());
+    document.write("判断栈是否为空: "+stack.isEmpty()+"<br>")
+    //往栈里面添加元素
+    stack.push(5);
+    stack.push(8);
+    stack.push(1);
+    document.write("查找栈最后添加的元素： "+stack.peek()+"<br>");
+    //再添加一个元素
+    stack.push(12);
+    document.write("栈的长度： "+stack.size()+"<br>");
+    document.write("判断栈是否为空: "+stack.isEmpty()+"<br>");
+
+    stack.print();
+
+    //移除2个元素
+    stack.pop();
+    stack.pop();
+    document.write("移除的元素： "+stack.pop()+"<br>");
+    document.write("栈的长度： "+stack.size()+"<br>");
+    stack.print();
+    function divideBy2(decNumber){
+        var remStack=new Stack(),
+            rem,
+            binaryStack=new Stack(),
+            binaryStr='';
+        while(decNumber>0){
+            rem=Math.floor(decNumber%2);
+            //console.log("rem:"+rem);
+            remStack.push(rem);
+            decNumber=Math.floor(decNumber/2);
+        }
+        //console.log(remStack);
+        remStack.print();
+        while(!remStack.isEmpty()){
+            /* remStack.pop();
+             remStack.print();
+             binaryStack.push1(remStack.pop());*/
+            var a=remStack.pop();
+            console.log(remStack.pop());
+        }
+        console.log("_______________________"+binaryStr)
+        binaryStack.print();
+        // return binaryStr;
+    }
+    //divideBy2(10);
+    console.log(divideBy2(10));
+
+</script>
+</body>
+</html>

@@ -4,57 +4,58 @@
     <meta charset="UTF-8">
     <title>index 0416</title>
 </head>
+<!--   author: www.yaoxiaowen.com -->
 <body>
 <div>
     <div>
         <div>
+            <!--输入 123456-->
             <lable>请输入员工编号</lable>
             <input id="keyWord" type="text">
         </div>
 
         <div>
+            <!--输入 yaowen-->
             <lable>请输入员工姓名</lable>
             <input id="staffName" type="text">
         </div>
         <div>
+            <!--点击保存，输出监听函数中的log信息-->
             <button id="save">保存</button>
         </div>
 
     </div>
-
 </div>
 <script>
     var keyword=document.getElementById("keyWord");
     var name=document.getElementById("staffName");
     var save=document.getElementById("save");
 
-    console.log("enter script, ==1==" + "\t keyword=" + keyword +
-        "\t keyword.value = " +keyword.value);
+    //输出：  keyword=[object HTMLInputElement]	 keyword.value =
+    console.log("keyword=" + keyword + "\t keyword.value = " +keyword.value);
+
 
     var keyValue = keyword.value;
+    //输出： ===
     if (keyValue === ""){
         console.log("===");
     }else {
         console.log("!==");
     }
 
-    console.log("enter script --2--, " + "\t name=" + name +
-        "\t name.value = " +name.value);
+    //输出：name=[object HTMLInputElement]	 name.value = undefined
+    console.log("\t name=" + name + "\t name.value = " +name.value);
 
 
-
-    //新建员工
     save.onclick=function(){
+        //输出：  keyword=[object HTMLInputElement]	 keyword.value = 123456
+        console.log("keyword=" + keyword + "\t keyword.value = " +keyword.value);
 
-        console.log("save.onclick(), >>3<<" + "\t keyword=" + keyword +
-            "\t keyword.value = " +keyword.value);
+        //输出：name=[object HTMLInputElement]	  name.value = undefined
+        console.log("\t name=" + name + "\t  name.value = " +name.value);
 
-
-        console.log("save.onclick(), ##4## " + "\t name=" + name +
-            "\t  name.value = " +name.value);
-        console.log("save.onclick(), " + "document.getElementById('staffName').value = " + document.getElementById("staffName").value);
-
-
+        //输出： document.getElementById('staffName').value = yaowen
+        console.log("document.getElementById('staffName').value = " + document.getElementById("staffName").value);
 
     }
 </script>
