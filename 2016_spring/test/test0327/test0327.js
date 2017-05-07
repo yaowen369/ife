@@ -4,6 +4,8 @@
 
 function changeOnClick() {
     var spanes = document.getElementsByTagName("SPAN");
+    //Array Like
+    spanes = Array.prototype.slice.call(spanes);
     for (let i=0; i<spanes.length; i++){
         var spanText = spanes[i].childNodes[0].nodeValue;
         var spanParent = spanes[i].parentNode;
@@ -26,4 +28,14 @@ function changeOnClick2() {
 
         spanParent.innerHTML = parentText;
     }
+}
+
+function test() {
+    var a = 1;
+    a++;
+    a = setTimeout(function () {
+        var a = 2;
+    }, 3000);
+    alert(++a);
+    console.log(a);
 }

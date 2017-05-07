@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input id="staffNumber" type="text"/>
+<input id="btn" type="button" value="click me"/>
+<!--onclick="btnClick()-->
+
+<script >
+    var staffNumber = document.getElementById("staffNumber");
+    var btn=document.getElementById("btn");
+
+    console.log("staffNumber = " + staffNumber);
+    btn.onclick=function(){
+        console.log("enter  btnClick");
+        console.log("staffNumber.value = " + staffNumber.value);
+    }
+
+//    function btnClick() {
+//        console.log("enter  btnClick");
+//        console.log("staffNumber.value = " + staffNumber.value);
+//    }
+
+</script>
+
+</body>
+</html>
