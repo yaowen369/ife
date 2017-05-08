@@ -50,7 +50,11 @@ input[type="submit"]{
     background-color: #6495ED;
 }
 
-.delete-content{
+/*.delete-content{*/
+    /*background-color: #90EE90;*/
+/*}*/
+
+.common:hover{
     background-color: #90EE90;
 }
 

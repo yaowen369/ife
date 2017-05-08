@@ -7,15 +7,41 @@ window.onload = function () {
     run();
     var tagList;
     var tagInput;
+    var tagDiv;
 
     function run() {
+        init();
+
+    };
+
+    //从tagList当中取出数据，并创造 tagDiv 下面的内容
+    function createTagDivContent() {
+        tagDiv.innerHTML = "";
+
+        console.log("enter  createTagDivContent() ");
+
+        tagList.reset();
+        while (tagList.hasNext()) {
+            var element = tagList.next();
+            var circleDiv = document.createElement("DIV");
+            var divTxt = document.createTextNode(element);
+            circleDiv.appendChild(divTxt);
+            circleDiv.className += " common";
+            circleDiv.className += " content";
+            console.log("createDiv -> circleDiv = " + circleDiv);
+            tagDiv.appendChild(circleDiv);
+        }
+    };
+
+
+    function init() {
         tagList = new LinkedList();
         tagInput = document.getElementById("tagInput");
+        tagDiv = document.getElementById("tagDiv");
 
         document.getElementById("tagAddBtn").addEventListener("click", tagAddBtnClick);
         document.getElementById("tagDelBtn").addEventListener("click", tagDelBtnClick);
-    };
-
+    }
 
 
     function tagAddBtnClick() {
@@ -23,6 +49,8 @@ window.onload = function () {
         console.log("inputAddValue = " + str);
         tagList.append(str);
         tagList.print();
+
+        createTagDivContent();
     }
 
     function tagDelBtnClick() {
@@ -43,6 +71,27 @@ window.onload = function () {
         var length = 0;
         var head = null;
         var maxQuantity = 4;
+
+        //模仿java的  Iterator 迭代器模式进行遍历
+        var iteratorPoint = head;
+        this.hasNext = function () {
+            if (iteratorPoint === null){
+                return false;
+            }else {
+                return true;
+            }
+        };
+
+        this.next = function () {
+            var element = iteratorPoint.element;
+            iteratorPoint = iteratorPoint.next;
+            return element;
+        };
+
+        //进行 iterator 遍历时，将指针指向头部
+        this.reset = function () {
+            iteratorPoint = head;
+        };
 
         //在末尾添加元素，如果重复则不添加
         this.append = function (element) {
