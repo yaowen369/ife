@@ -8,11 +8,24 @@ window.onload = function () {
     var tagList;
     var tagInput;
     var tagDiv;
+    var mCommonUtils;
 
     function run() {
         init();
 
     };
+
+
+    function init() {
+        tagList = new LinkedList();
+        tagInput = document.getElementById("tagInput");
+        tagDiv = document.getElementById("tagDiv");
+        mCommonUtils = new CommonUtils();
+
+        document.getElementById("tagAddBtn").addEventListener("click", tagAddBtnClick);
+        document.getElementById("tagDelBtn").addEventListener("click", tagDelBtnClick);
+    }
+
 
     //从tagList当中取出数据，并创造 tagDiv 下面的内容
     function createTagDivContent() {
@@ -28,20 +41,28 @@ window.onload = function () {
             circleDiv.appendChild(divTxt);
             circleDiv.className += " common";
             circleDiv.className += " content";
-            console.log("createDiv -> circleDiv = " + circleDiv);
+
+            circleDiv.addEventListener("mouseover", whenMouseOver);
+            circleDiv.addEventListener("mouseout", whenMouseOut);
+
             tagDiv.appendChild(circleDiv);
         }
     };
 
-
-    function init() {
-        tagList = new LinkedList();
-        tagInput = document.getElementById("tagInput");
-        tagDiv = document.getElementById("tagDiv");
-
-        document.getElementById("tagAddBtn").addEventListener("click", tagAddBtnClick);
-        document.getElementById("tagDelBtn").addEventListener("click", tagDelBtnClick);
+    //当鼠标放置在 div上面时，触发的方法
+    function whenMouseOver(obj) {
+        console.log("enter whenMouseOver(), obj=" + obj);
+        mCommonUtils.removeClass(obj.target, "content");
+        mCommonUtils.addClass(obj.target, "delete-content");
     }
+
+    //当鼠标移除到div上面时，触发的方法
+    function whenMouseOut(obj) {
+        console.log("enter whenMouseOut(). obj = " + obj);
+        mCommonUtils.addClass(obj.target, "content");
+        mCommonUtils.removeClass(obj.target, "delete-content");
+    }
+
 
 
     function tagAddBtnClick() {

@@ -50,11 +50,15 @@ input[type="submit"]{
     background-color: #6495ED;
 }
 
-/*.delete-content{*/
-    /*background-color: #90EE90;*/
-/*}*/
-
-.common:hover{
+.delete-content{
     background-color: #90EE90;
 }
+
+.delete-content:before{
+    content: '删除：';
+}
+
+/*.common:hover{*/
+    /*background-color: #90EE90;*/
+/*}*/
 
