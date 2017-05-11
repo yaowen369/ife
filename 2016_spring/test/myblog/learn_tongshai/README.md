@@ -1,0 +1,1 @@
+这是本人初学前端时模仿的一个网站，具体参见本人的[第一篇博客](http://www.cnblogs.com/yaoxiaowen/p/6091588.html) 
