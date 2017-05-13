@@ -44,6 +44,7 @@ window.onload = function () {
 
             circleDiv.addEventListener("mouseover", whenMouseOver);
             circleDiv.addEventListener("mouseout", whenMouseOut);
+            circleDiv.addEventListener("click", whenClickDelete);
 
             tagDiv.appendChild(circleDiv);
         }
@@ -61,6 +62,14 @@ window.onload = function () {
         console.log("enter whenMouseOut(). obj = " + obj);
         mCommonUtils.addClass(obj.target, "content");
         mCommonUtils.removeClass(obj.target, "delete-content");
+    }
+
+    //当点击的时候，执行删除该元素的操作
+    function whenClickDelete(obj) {
+        var contentStr = obj.target.firstChild.nodeValue;
+        tagList.removeElement(contentStr);
+        console.log("enter  whenClickDelete(), obj = " + obj + "\t contentStr = " + contentStr);
+        createTagDivContent();
     }
 
 
@@ -117,6 +126,10 @@ window.onload = function () {
         //在末尾添加元素，如果重复则不添加
         this.append = function (element) {
 
+            if (this.isRepeat()){
+                return;
+            }
+
             if (this.isMaxLength()){
                 this.remove();
             }
@@ -130,9 +143,6 @@ window.onload = function () {
             }
 
             while (current != null){
-                if (current.element === element){
-                    break;
-                }
                 if (current.next === null){
                     current.next = new Node(element);
                     length++;
@@ -169,6 +179,18 @@ window.onload = function () {
                 length--;
             }
         };
+
+        //是否存在重复元素
+        this.isRepeat = function (element) {
+            var current = head;
+            while (current != null){
+                if (current.element === element){
+                    return true;
+                }
+                current = current.next;
+            }
+            return false;
+        }
 
         this.size = function () {
             return length;
